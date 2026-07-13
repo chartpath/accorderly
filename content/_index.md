@@ -7,7 +7,7 @@ I'm **Chris Hart**. I run Accorderly as a one-person consulting practice — eve
 
 What I do is small-team software delivery: continuous Discovery, Design, and DevOps, run in parallel rather than as three hand-offs.
 
-[**Get in touch →**](/contact/){.button}
+{{< hextra/hero-button text="Get in touch →" link="/contact/" >}}
 
 ## How I work
 
