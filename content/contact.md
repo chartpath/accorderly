@@ -3,9 +3,9 @@ title: Contact
 toc: false
 ---
 
-## Get in touch
+## Get in touch — directly with me
 
-The fastest way to start a conversation is email. If it makes sense, we'll set up a short call. If a different person is a better fit, I'll say so.
+This is a one-person practice, which means the person who reads your message is the person who will be on the call, doing the customer interviews, writing the code, and writing the retro. There is no account manager, no first-line support, no escalation path.
 
 I answer most messages within one business day.
 
@@ -23,6 +23,7 @@ Use this when you already know you want to talk and you want to pick a time dire
 
 ## LinkedIn
 
-[Accorderly on LinkedIn ↗](https://www.linkedin.com/company/accorderly/)
+- [Chris Hart on LinkedIn ↗](https://www.linkedin.com/in/chartpath/) — me, personally
+- [Accorderly on LinkedIn ↗](https://www.linkedin.com/company/accorderly/) — the company page
 
-Useful for a follow or a brief introduction. For anything that needs a real reply, please email instead.
+For anything that needs a real reply, please email instead.

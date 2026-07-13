@@ -3,7 +3,7 @@ title: How I work
 type: docs
 ---
 
-Accorderly's process blends three continuous activities: discovery, design, and delivery. They are not phases that hand off. They run on their own clocks and overlap on purpose, so decisions stay close to the work and the work stays close to the user.
+Accorderly's process blends three continuous activities: Discovery, Design, and DevOps. They are not phases that hand off. They run on their own clocks and overlap on purpose, so decisions stay close to the work and the work stays close to the user.
 
 ## Pages
 

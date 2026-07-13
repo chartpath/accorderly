@@ -1,6 +1,6 @@
 # Accorderly
 
-**Accorderly Technologies Inc.** — solo tech consulting. Continuous discovery, design, and delivery, run in parallel rather than as three hand-offs.
+**Accorderly Technologies Inc.** — solo tech consulting. Continuous Discovery, Design, and DevOps, run in parallel rather than as three hand-offs.
 
 This repo is the source for [accorderly.com](https://accorderly.com). It is a small Hugo site built on the [Hextra](https://github.com/imfing/hextra) theme and deployed to GitHub Pages.
 
@@ -12,7 +12,7 @@ This repo is the source for [accorderly.com](https://accorderly.com). It is a sm
 - `content/docs/` — the working docs:
   - `_index.md` — "How I work" index
   - `accessibility.md` — the plain-language guideline that shapes how everything on this site reads
-  - `process/` — `discovery.md`, `design.md`, `delivery.md`, plus an overview
+  - `process/` — `discovery.md`, `design.md`, `devops.md`, plus an overview
 - `static/` — favicons, the wordmark (`images/accorderly-icon.svg`), and the `CNAME` file that pins GitHub Pages to `accorderly.com`
 - `hugo.yaml` — site config
 - `.github/workflows/pages.yaml` — builds the site on push to `main` and deploys to GitHub Pages

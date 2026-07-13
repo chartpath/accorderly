@@ -3,19 +3,36 @@ title: About
 type: about
 ---
 
-Solo tech consulting. One person, end to end — discovery, design, delivery.
+Solo tech consulting. One person, end to end — Discovery, Design, DevOps.
 
 ## Who I am
 
-I'm **Chris Hart**, the solo engineer behind Accorderly. I'm based in Moncton, New Brunswick, and I work with small product teams that need one senior person end to end: discovery, design, delivery, all the way to shipped software.
+I'm **Chris Hart**. Accorderly is my one-person consulting practice. There is no team behind it, no agency, no account managers, no one for me to hand your work off to. Every call you book is with me. Every commit you review is mine. Every customer interview on your product is mine.
+
+I'm based in Moncton, New Brunswick, and I work with small product teams that need one senior person end to end: Discovery, Design, DevOps, all the way to shipped software.
 
 My [LinkedIn headline](https://www.linkedin.com/in/chartpath/) sums up the stance: *people are better than computers.* I've consulted for some of the largest global companies, and I keep coming back to small teams because that's where the work is closest to the user.
 
-I write code, talk to users, sketch the rough edges of a solution, and ship small and often. I've spent most of my career inside teams that didn't have a lot of process, and most of that process got cut for good reason; what's left here is the smallest set of habits that reliably gets a useful thing into someone's hands.
+## What you get
+
+The same set of practices an in-house senior engineer or a small high-performing team uses, compressed onto one person, with no ceremony:
+
+- **Direct access to me.** Email reply, weekly call, daily Slack thread — whatever fits the engagement. There is no first-line support, no escalation path.
+- **The same person on Discovery, Design, and DevOps.** No context lost between the person running interviews and the person writing code.
+- **A weekly note from me.** What shipped, what we learned, what the next week is shaped around.
+- **Decisions captured where the work happens** — issues, pull requests, the OST itself — not in a separate doc that nobody reads.
+- **Plain language in everything that leaves my laptop.** No agency-style prose.
+
+What I do *not* do:
+
+- Scale up by hiring. If an engagement needs two senior engineers at once, I'll say so in the first call and refer you to someone else.
+- Hide behind a brand. Accorderly is just a name for the work I do as Chris Hart. If we work together, you know who you're working with.
+- Stay quiet when something is off. If the work isn't a fit, I would rather end the engagement cleanly than drag it out.
 
 ## How I work
 
-- Short, written contracts of intent before any code is written
+- Short, written contracts of intent before any code is written — see [Shape Up](https://basecamp.com/shapeup) on shaping and pitching
+- A weekly habit of customer interviews feeding an Opportunity Solution Tree, drawn from [Teresa Torres' Continuous Discovery](https://www.producttalk.org/opportunity-solution-trees/)
 - A weekly note covering what shipped, what changed in understanding, and what's next
 - Decisions captured where the work happens, not in a separate system
 - Plain language in everything that leaves my laptop

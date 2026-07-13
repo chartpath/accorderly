@@ -59,6 +59,16 @@ These are easy to get wrong on first contact:
 | Workflow | `.github/workflows/pages.yaml` | builds on push to `main`, deploys to GitHub Pages |
 | Old demo / Netlify | none | demo content was already deleted; `netlify.toml` and `pages.yaml` (orig) replaced |
 
+## Process docs are sourced — do not invent
+
+The pages under `content/docs/process/` are a synthesis of published frameworks with attribution. Edits should keep the attribution honest and the names of the original authors / books / sites intact. Current sources:
+
+- **Discovery** — Teresa Torres, *Continuous Discovery Habits* (2021) and the Opportunity Solution Tree at `producttalk.org`
+- **Design** — UK Design Council's Double Diamond (`designcouncil.org.uk`) and *Shape Up* by Ryan Singer (Basecamp)
+- **DevOps** — *The DevOps Handbook* (Kim, Humble, Debois, Willis, Forsgren) and The Three Ways
+
+The Triple Diamond name is a synthesis, not a single canonical model. If a future page uses the word "diamond", it should make clear which framework it is borrowing from. The file is `devops.md`, not `delivery.md` — the third diamond covers build, ship, observe, not just shipping.
+
 ## Deploy
 
 Production deploy is **GitHub Pages**, not bunny.net. The workflow reads the base URL from `actions/configure-pages`, so the local `--baseURL` and the deployed URL do not have to match. Do not hardcode `baseURL` in `pages.yaml`.
