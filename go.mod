@@ -1,4 +1,4 @@
-module github.com/imfing/hextra-starter-template
+module github.com/chartpath/accorderly
 
 go 1.26
 

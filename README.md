@@ -1,79 +1,80 @@
-# Hextra Starter Template
+# Accorderly
 
-[![Deploy Hugo site to Pages](https://github.com/imfing/hextra-starter-template/actions/workflows/pages.yaml/badge.svg)](https://github.com/imfing/hextra-starter-template/actions/workflows/pages.yaml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6e83fd88-5ffe-4808-9689-c0f3b100bfe3/deploy-status)](https://app.netlify.com/sites/hextra-starter-template/deploys)
-![Vercel Deployment Status](https://img.shields.io/github/deployments/imfing/hextra-starter-template/production?logo=vercel&logoColor=white&label=vercel&labelColor=black&link=https%3A%2F%2Fhextra-starter-template.vercel.app%2F)
+**Accorderly Technologies Inc.** — solo tech consulting. Continuous discovery, design, and delivery, run in parallel rather than as three hand-offs.
 
+This repo is the source for [accorderly.com](https://accorderly.com). It is a small Hugo site built on the [Hextra](https://github.com/imfing/hextra) theme and deployed to GitHub Pages.
 
-🐣 Minimal template for getting started with [Hextra](https://github.com/imfing/hextra)
+## What's in here
 
-![hextra-template](https://github.com/imfing/hextra-starter-template/assets/5097752/c403b9a9-a76c-47a6-8466-513d772ef0b7)
+- `content/_index.md` — landing page
+- `content/about.md` — about
+- `content/contact.md` — contact details
+- `content/docs/` — the working docs:
+  - `_index.md` — "How I work" index
+  - `accessibility.md` — the plain-language guideline that shapes how everything on this site reads
+  - `process/` — `discovery.md`, `design.md`, `delivery.md`, plus an overview
+- `static/` — favicons, the wordmark (`images/accorderly-icon.svg`), and the `CNAME` file that pins GitHub Pages to `accorderly.com`
+- `hugo.yaml` — site config
+- `.github/workflows/pages.yaml` — builds the site on push to `main` and deploys to GitHub Pages
 
-[🌐 Demo ↗](https://imfing.github.io/hextra-starter-template/)
+## Local development
 
-## Quick Start
+Requires [Hugo](https://gohugo.io/getting-started/installing/) (extended) and [Go](https://golang.org/doc/install).
 
-Use this template to create your own repository:
+```shell
+hugo mod tidy
+hugo server --bind 0.0.0.0 -p 1313
+```
 
-<img src="https://docs.github.com/assets/cb-77734/mw-1440/images/help/repository/use-this-template-button.webp" width=400 />
+The `--bind 0.0.0.0` flag is useful if you want to test from another device on the same network.
 
-You can also quickly start developing using the following online development environment:
+## Production build
 
-- [GitHub Codespaces](https://github.com/codespaces)
+```shell
+hugo --gc --minify --baseURL https://accorderly.com/
+```
 
-    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/imfing/hextra-starter-template)
-
-    Create a new codespace and follow the [Local Development](#local-development) to launch the preview
-
+The output goes to `public/` and is what gets uploaded.
 
 ## Deployment
 
-### GitHub Pages
+Deploys are handled by GitHub Actions on every push to `main`. The workflow is `.github/workflows/pages.yaml`:
 
-A GitHub Actions workflow is provided in [`.github/workflows/pages.yaml`](./.github/workflows/pages.yaml) to [publish to GitHub Pages](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/) for free. 
+1. Checks out the repo with submodules
+2. Installs Hugo `0.156.0` extended and Go `1.26`
+3. Runs `hugo mod tidy` then `hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"`
+4. Uploads `public/` as a Pages artifact
+5. Deploys the artifact to GitHub Pages
 
-For details, see [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
+The base URL is set at build time from the `actions/configure-pages` step, so the same workflow runs cleanly against both the default GitHub Pages URL and a custom domain.
 
-Note: in the settings, make sure to set the Pages deployment source to **GitHub Actions**:
+### One-time setup
 
-<img src="https://github.com/imfing/hextra-starter-template/assets/5097752/99676430-884e-42ab-b901-f6534a0d6eee" width=600 />
+1. In the repo, open **Settings → Pages**.
+2. Under **Build and deployment → Source**, pick **GitHub Actions**.
+3. (Optional) Under **Custom domain**, enter `accorderly.com` and follow GitHub's instructions to add the DNS records (apex + `www`). The repo already ships `static/CNAME` so once the domain is verified Pages will serve from it without further config.
 
-[Run the workflow manually](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow) if it's not triggered automatically.
+You can also run the workflow manually from the Actions tab (`workflow_dispatch`).
 
-### Netlify
+## When to move to bunny.net (later)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/imfing/hextra-starter-template)
+The site is one file, the build is ~70 ms, and traffic at launch will be near zero. GitHub Pages is fine for that.
 
-### Vercel
+If any of these change, switch the deploy to bunny.net:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fimfing%2Fhextra-starter-template&env=HUGO_VERSION)
+- You start seeing throttling past the Pages bandwidth cap (currently ~100 GB/month before throttling kicks in)
+- You need tunable cache TTLs or push-button cache purges
+- You want the site on its own edge nodes for geographic reasons
 
-Override the configuration:
+The bunny.net deploy would be the same `hugo --gc --minify` artifact plus an `rclone sync` to a Storage Zone and an explicit Pull Zone purge. The workflow we previously had is straightforward to bring back when it becomes worth it.
 
-<img src="https://github.com/imfing/hextra-starter-template/assets/5097752/e2e3cecd-c884-47ec-b064-14f896fee08d" width=600 />
+## Accessibility — by design
 
-## Local Development
+Every page on this site is written against the plain-language guideline in [`content/docs/accessibility.md`](./content/docs/accessibility.md). The short version:
 
-Pre-requisites: [Hugo](https://gohugo.io/getting-started/installing/), [Go](https://golang.org/doc/install) and [Git](https://git-scm.com)
+- Short sentences, one idea per paragraph
+- Everyday words; define a term the first time it's used
+- Headings describe the section they head
+- Every long page opens with a TL;DR
 
-```shell
-# Clone the repo
-git clone https://github.com/imfing/hextra-starter-template.git
-
-# Change directory
-cd hextra-starter-template
-
-# Start the server
-hugo mod tidy
-hugo server --logLevel debug --disableFastRender -p 1313
-```
-
-### Update theme
-
-```shell
-hugo mod get -u
-hugo mod tidy
-```
-
-See [Update modules](https://gohugo.io/hugo-modules/use-modules/#update-modules) for more details.
-
+If a future page on this site reads like marketing fluff, that page is wrong.

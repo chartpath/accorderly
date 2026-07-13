@@ -1,18 +1,13 @@
 ---
-title: Documentation
-next: first-page
+title: How I work
+type: docs
 ---
 
-This is a demo of the theme's documentation layout.
+Accorderly's process blends three continuous activities: discovery, design, and delivery. They are not phases that hand off. They run on their own clocks and overlap on purpose, so decisions stay close to the work and the work stays close to the user.
 
-## Hello, World!
+## Pages
 
-```go {filename="main.go"}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
+{{< cards >}}
+  {{< card link="process" title="Triple Diamond SDLC" icon="arrows-expand" subtitle="An overview of the three continuous activities and how they fit together." >}}
+  {{< card link="accessibility" title="Accessibility — easy to understand" icon="book-open" subtitle="The plain-language guideline that shapes how everything on this site reads." >}}
+{{< /cards >}}
