@@ -1,6 +1,7 @@
 ---
 title: DevOps
 type: docs
+weight: 3
 prev: docs/process/design
 ---
 
@@ -19,6 +20,12 @@ The framing comes from [The DevOps Handbook](https://itrevolution.com/the-devops
 - **The Third Way — Continuous Learning.** A culture that experiments, takes risks, and converts local learning into global improvement. The reason the loop never stops is the team's job is to get better at running the loop
 
 This third diamond is where DORA's four metrics live: **deployment frequency, lead time for changes, change failure rate, and failed deployment recovery time.** A solo engagement has less ceremony than a large team, but the same metrics and the same feedback loop.
+
+## Why a third diamond (shift-left)
+
+The Double Diamond ends at delivery — the second diamond converges on what gets built. Treating delivery as a one-shot event at the end loses the answer to the only question that matters: *does it actually work for the people we said it would work for?* The way to keep that answer honest is to start the build / ship / observe loop on day one, not at the end of the project. That is the "shift left" approach: do the things later in the lifecycle earlier, in parallel with the things that come before them.
+
+The phrase comes from Larry Smith's 2001 *Dr. Dobb's Journal* article on [shift-left testing](https://en.wikipedia.org/wiki/Shift-left_testing), where "left" means earlier on the project timeline. The same principle applied to security is the basis of DevSecOps; applied to delivery it is the basis of the DevOps diamond on this site. CI/CD, telemetry, and small changes behind flags are not a final phase — they run alongside Discovery and Design, all the time.
 
 ## What happens
 

@@ -34,7 +34,56 @@ There are no tests. The only signal is a clean build:
 hugo mod tidy && hugo --gc --minify --baseURL https://accorderly.com/
 ```
 
-If you changed prose, also do a manual read against the `Accessibility — easy to understand` guideline at `content/docs/accessibility.md`. That page is the writing contract for the whole site; new prose that violates it (jargon, marketing fluff, double negatives, buzzwords) is a bug.
+If you changed prose, also do a manual read against the *Plain-language writing rules* section below. The site is not externally tested for conformance; this is the contract that all prose on the site is checked against manually. New prose that violates it (jargon, marketing fluff, double negatives, buzzwords) is a bug.
+
+## Plain-language writing rules (internal contract)
+
+The whole site should read like a clear note from one person to another: short sentences, everyday words, one idea per paragraph, no marketing fluff. This section used to live at `content/docs/accessibility.md` as a public page; it was moved here because the guidance is for the agent / author, not for site visitors.
+
+### Plain language
+
+- Short sentences. Aim for under 20 words. Break long ones in half.
+- Everyday words. If a simpler word works, use it.
+- One idea per paragraph. If a paragraph covers two ideas, split it.
+- Active voice. "I write code" instead of "code is written".
+- Present tense where it fits. "The loop converges" instead of "the loop will have converged".
+- Define a term the first time it is used, especially if it is a process name like "delivery".
+- No idioms, no culture-specific references. They do not survive translation.
+- No marketing fluff. No "best-in-class". No "world-class". No "robust".
+
+### Structure
+
+- Headings describe the section they head. "How engagements work" is fine. "Going forward" is not.
+- Every long page starts with a TL;DR: 2–4 bullets that summarise the page in a way that lets you stop reading.
+- Use bullet lists when order does not matter.
+- Use numbered lists when order does.
+- Code, commands, file paths, and identifiers are in code formatting. Nothing else is.
+
+### Tone
+
+- Direct, not chatty.
+- Helpful, not promotional.
+- Honest about what is and is not in scope.
+- One voice. The whole site is written by one person — it should sound like it.
+
+### Review checklist
+
+Before publishing any page, read it once and answer these:
+
+1. Could a smart non-expert understand every sentence?
+2. Does each heading tell the reader what the section is about?
+3. Is every paragraph about one idea?
+4. Is every list either clearly ordered or clearly unordered?
+5. Are there any idioms, slang, or jargon that the reader would have to look up?
+6. Are there any superlatives, buzzwords, or marketing-only words ("best", "world-class", "robust", "seamless")?
+7. Does the TL;DR actually save the reader from reading the page when they only need the gist?
+8. If a sentence says nothing, is it cut?
+
+If any answer is "no" or "sort of", fix it before publishing.
+
+### Out of scope
+
+Technical accessibility (WCAG, screen-reader semantics, keyboard nav, contrast) is a separate piece of work and is not the contract this section enforces. When that work starts, it will live in its own internal doc.
 
 ## Hextra gotchas
 

@@ -21,6 +21,12 @@ It is called "triple diamond" because it is a synthesis of three models that eac
 
 Each of those sources is for larger teams. The triple-diamond reframing keeps the same habits but compresses them onto one person — me, Chris Hart — which is what a solo engagement can afford. I run all three loops myself rather than splitting them across roles.
 
+## Why "triple" rather than "double"
+
+The Double Diamond ends at delivery — the second diamond converges on what gets built. In practice, the moment something is shipped, the question "does it actually work for the people we said it would work for?" starts. That is its own loop, and it is where DevOps earns its keep. Adding a third diamond for build / ship / observe is the smallest change that keeps the answer honest without inventing a new model.
+
+The reason for keeping it a parallel loop rather than a serial phase is the [shift-left](https://en.wikipedia.org/wiki/Shift-left_testing) idea (Larry Smith, 2001): do the things that traditionally live at the end of the timeline earlier, in parallel with the things that come before. Shift-left testing means tests run with every commit, not at release. Shift-left delivery — the third diamond — means the build, ship, and observe loop runs alongside Discovery and Design from day one, not after the design is "done".
+
 {{< cards >}}
   {{< card link="discovery" title="Discovery" icon="search" subtitle="Continuous customer interviews, an Opportunity Solution Tree, and one working hypothesis a week." >}}
   {{< card link="design" title="Design" icon="pencil-alt" subtitle="Shape a rough, solved, bounded pitch that fits the appetite before any code is written." >}}
@@ -35,10 +41,6 @@ Each of those sources is for larger teams. The triple-diamond reframing keeps th
 - Real usage either confirms the opportunity or replaces it before the flag flips
 
 No big reveal. No phase-gate. Each loop ends every week.
-
-## Why "triple" rather than "double"
-
-The Double Diamond ends at delivery — the second diamond converges on what gets built. In practice, the moment something is shipped, the question "does it actually work for the people we said it would work for?" starts. That is its own loop, and it is where DevOps earns its keep. Adding a third diamond for build / ship / observe is the smallest change that keeps the answer honest without inventing a new model.
 
 ## How engagements start
 

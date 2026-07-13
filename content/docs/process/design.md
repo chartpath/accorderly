@@ -1,6 +1,7 @@
 ---
 title: Design
 type: docs
+weight: 2
 prev: docs/process/discovery
 next: docs/process/devops
 ---

@@ -45,3 +45,7 @@ params:
   editURL:
     enable: true
     base: "https://github.com/chartpath/accorderly/edit/main/content"
+
+  description: "Solo tech consulting. Continuous Discovery, Design, and DevOps, run in parallel rather than as three hand-offs. From Chris Hart in Moncton, New Brunswick."
+  images:
+    - images/accorderly-icon.svg

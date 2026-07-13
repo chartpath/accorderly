@@ -7,6 +7,8 @@ I'm **Chris Hart**. I run Accorderly as a one-person consulting practice — eve
 
 What I do is small-team software delivery: continuous Discovery, Design, and DevOps, run in parallel rather than as three hand-offs.
 
+[**Get in touch →**](/contact/){.button}
+
 ## How I work
 
 - **One senior person end to end.** You email me, I reply. You book a call, you get me. You read a retro, I wrote it.

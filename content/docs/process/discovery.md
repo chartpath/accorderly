@@ -1,6 +1,7 @@
 ---
 title: Discovery
 type: docs
+weight: 1
 prev: docs/process
 next: docs/process/design
 ---

@@ -5,3 +5,6 @@ resources/
 
 # Editor
 .vscode/
+
+# Local tooling artefacts (e.g. playwright session files)
+.playwright-cli/
