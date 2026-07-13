@@ -3,9 +3,9 @@ title:
 toc: false
 ---
 
-I'm Chris Hart. I run Accorderly as a one-person consulting practice for small product teams. I do the Discovery, the Design, the DevOps, and the writing. There is no agency or team behind this site — every email, every call, every commit is with me.
+I'm Chris Hart. I run Accorderly as a one-person consulting practice for small product teams. I work across three hats — product, design and UX research, and development — which is the role you'd call a CPTO, or a mercenary one: I embed in your team for the shape of an engagement, ship, and either stay or leave. There is no agency or team behind this site — every email, every call, every commit is with me.
 
-If your engagement needs more than one senior engineer at a time, I'd rather tell you in the first call than pretend I can scale.
+Smaller engagements are usually better, both for you and for me, but I am comfortable being one of several senior people on a larger engagement when the work calls for it.
 
 ## What I work on
 
@@ -22,6 +22,7 @@ If any of that sounds right and you want to talk, [email me](mailto:hello@accord
 - **Fixed scope** — when the problem is well-defined and the answer is mostly known.
 - **Retainer** — when you need a steady delivery partner for a quarter or more.
 - **Hourly** — when the work is open-ended and you want someone senior on call.
+- **Embedded** — when you need an extra senior on the team for a stretch and the work is the kind I do.
 
 The first conversation is short, free, and ends with one of three outcomes: a clear next step, a polite no, or a referral to someone better suited.
 

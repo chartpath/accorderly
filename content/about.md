@@ -3,7 +3,7 @@ title: About
 type: about
 ---
 
-Solo tech consulting. One person, end to end — Discovery, Design, DevOps.
+Solo tech consulting. Three hats, one person — product, design and UX research, development.
 
 ## Who I am
 
@@ -12,6 +12,16 @@ I'm Chris Hart. Accorderly is the name for the consulting work I do; it is not a
 I'm based in Moncton, New Brunswick. Most of my work is with small product teams that need one senior person running end to end. I've also consulted for some of the largest global companies; I keep coming back to small teams because that's where the work is closest to the user.
 
 My [LinkedIn headline](https://www.linkedin.com/in/chartpath/) sums up the stance: *people are better than computers.* That isn't a brand line. It's the reason I keep the practice small.
+
+## Three hats, one person
+
+The role you'd call a CPTO, or a mercenary one. I work across three hats:
+
+- **Product** — opportunity sizing, prioritisation, outcome framing, the weekly ritual of talking to customers and updating the Opportunity Solution Tree.
+- **Design and UX research** — shaping pitches before any code, running the interviews, sketching the rough edges of the solution, owning the contract of what "done" looks like.
+- **Development** — the actual building, the deploy pipeline, the telemetry, the on-call.
+
+That is one person, one set of context, one phone number to call. Smaller engagements are usually better for both of us, but I am comfortable embedding as one of several senior people on a larger team when the work calls for it — the way a fractional executive fits inside a company for a stretch, then moves on. I am not going to scale by hiring, and I am not going to hide behind a brand. If the work isn't a fit, I'd rather end the engagement cleanly than drag it out.
 
 ## What you get
 
@@ -22,12 +32,6 @@ The same set of practices an in-house senior engineer or a small high-performing
 - **A weekly note from me.** What shipped, what we learned, what the next week is shaped around.
 - **Decisions captured where the work happens** — issues, pull requests, the Opportunity Solution Tree itself — not in a separate doc that nobody reads.
 - **Plain language in everything that leaves my laptop.** No agency-style prose.
-
-What I do *not* do:
-
-- **Scale up by hiring.** If an engagement needs two senior engineers at once, I would rather say so in the first call and refer you to someone else.
-- **Hide behind a brand.** Accorderly is just a name for the work I do as Chris Hart. If we work together, you know who you're working with.
-- **Stay quiet when something is off.** If the work isn't a fit, I would rather end the engagement cleanly than drag it out.
 
 ## How I work, in practice
 
