@@ -78,3 +78,9 @@ Every page on this site is written against the plain-language guideline in [`con
 - Every long page opens with a TL;DR
 
 If a future page on this site reads like marketing fluff, that page is wrong.
+
+## License
+
+The site content in this repo is licensed under the [GNU Affero General Public License v3](https://www.gnu.org/licenses/agpl-3.0.html) (or later). Copyright (C) 2026 Accorderly Technologies Inc.
+
+Hextra is MIT-licensed by its author; see its license file inside the module cache or upstream repo for details.
