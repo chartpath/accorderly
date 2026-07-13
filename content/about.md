@@ -40,7 +40,13 @@ What I do *not* do:
 
 ## What I usually build with
 
-TypeScript on the web (React, Next.js, Astro, plain HTML), Python on the back end, Postgres for data that needs to stick, and whatever queue or cache is the lightest fit for the problem. I've shipped on AWS, Fly, Vercel, and Bunny CDN. I'm comfortable in the boring parts of a stack.
+A small, boring set of tools on purpose:
+
+- **Hugo** for static sites (this one is built on it)
+- **PocketBase** as the lightest practical backend — auth, database, file storage, and a small admin UI in one binary
+- **Custom Go services** when a problem needs its own binary, and a queue or cache when it needs a sidecar
+
+I'm comfortable in the boring parts of a stack and I reach for new things only when the boring options stop working.
 
 ## Services
 

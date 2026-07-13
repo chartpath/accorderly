@@ -13,7 +13,7 @@ I answer most messages within one business day.
 
 [hello@accorderly.com](mailto:hello@accorderly.com)
 
-A one-line subject line helps me triage quickly — for example, "Worth a 30-min call about a 6-week React build?" reads better than "Quick question".
+A one-line subject line helps me triage quickly — for example, "Worth a 30-min call about a 6-week backend build?" reads better than "Quick question".
 
 ## Book a call
 
