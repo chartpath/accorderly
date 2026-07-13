@@ -66,6 +66,64 @@ The whole site should read like a clear note from one person to another: short s
 - Honest about what is and is not in scope.
 - One voice. The whole site is written by one person — it should sound like it.
 
+### Writing patterns to avoid (tropes)
+
+Adapted from [tropes.fyi/tropes-md](https://tropes.fyi/tropes-md). Any single one of these used once is fine; the problem is when several appear together or one is repeated. Most of these are anti-patterns the model reaches for by default. Catch them before publishing.
+
+**Word choice**
+
+- No "quietly", "deeply", "fundamentally", "remarkably", "arguably" as decorative intensifiers
+- No "delve" — use "look at" or "look into"
+- No "tapestry", "landscape", "paradigm", "synergy", "ecosystem", "framework" used as decoration. ("Framework" is fine in its literal sense — the DevOps framework, the Design Council framework — but not as a synonym for "field" or "area".)
+- No "leverage" as a verb. No "utilize" — use "use".
+- No "robust", "streamline", "harness", "seamless"
+- No "serves as", "stands as", "marks", "represents" as a substitute for "is" or "are"
+
+**Sentence structure**
+
+- No "It's not X — it's Y" refrains, "It's not bold. It's backwards." style. One in a piece can be effective; ten is a tell. The reader can tell that X is Y without the inversion.
+- No "Not X. Not Y. Just Z." countdowns
+- No self-posed rhetorical questions like "The result? Devastating." Just say the thing.
+- No anaphora — repeating the same sentence opener three or four times in a row
+- No stacked tricolons. One rule-of-three is fine. Three in a paragraph is a pattern-recognition failure.
+- No "It's worth noting", "Importantly", "Interestingly", "Notably" as filler transitions
+- No "-ing" phrases tacked onto the end of sentences to imply shallow analysis ("highlighting its importance", "contributing to the development of")
+- No "from X to Y" ranges where X and Y aren't actually on a spectrum
+- No em-dashes for manufactured drama. One or two per page is fine. Eight is not. If a comma or colon does the job, use that.
+- No "Despite its challenges" formula that acknowledges problems only to dismiss them
+
+**Paragraph structure**
+
+- No short punchy fragments for manufactured emphasis. "He published this. Openly. As a book." — no. Write like a human thinks, not like a captioned infographic.
+- No "listicle in a trench coat" — paragraphs that disguise themselves as continuous prose but are really sequential points starting with "The first… The second… The third…"
+
+**Tone**
+
+- No "Here's the kicker / thing / deal / where it gets interesting" — the buildup is bigger than the payoff
+- No "Think of it as…" or "It's like a…" analogies that oversimplify the reader's own concept
+- No "Imagine a world where…" futurism filler
+- No false vulnerability ("And yes, I'm openly in love with…"). Either say the thing or don't.
+- No "The truth is simple / History is unambiguous / The metrics are clear" assertions of clarity in lieu of being clear
+- No grandiose stakes inflation. "This will fundamentally reshape how we think about everything." — no.
+- No "Let's break this down", "Let's unpack this", "Let's dive in"
+- No vague attributions. If you can't name the expert, the report, or the paper, don't cite it. "Experts argue", "Industry reports suggest", "Several publications have cited" — all banned.
+- No invented concept labels. "The supervision paradox", "The acceleration trap" — these are rhetorical placeholders, not concepts.
+- No dead metaphor. Pick one and use it once or twice, don't beat it into the ground across the entire piece.
+
+**Composition**
+
+- No fractal summaries. Don't say "In this section we'll explore…" at the top and "As we've seen in this section…" at the bottom. The TL;DR is the only summary that's allowed.
+- No historical-analogy stacking. The "Apple didn't build Uber, Facebook didn't build Spotify, Stripe didn't build Shopify" pattern is banned. One analogy at a time.
+- No one-point dilution. Don't restate the same thesis eight ways across four thousand words. If a paragraph can be cut without losing information, cut it.
+- No content duplication. The same paragraph appearing twice in a single piece is a sign of unedited output.
+- No "In conclusion" signposts. The reader can tell.
+
+**Formatting**
+
+- No bold-first bullets. Every bullet starting with `**Keyword**: …` is a tell.
+- No Unicode decoration in prose. Use straight quotes, hyphens, and `->` or `→` only where it actually carries meaning. Real writers type straight quotes.
+- No emoji in marketing copy. Process pages with a single small emoji for the diamond icon (via Hextra's `icon` parameter on `{{< card >}}`) is fine; that is iconography, not decoration.
+
 ### Review checklist
 
 Before publishing any page, read it once and answer these:
@@ -78,6 +136,8 @@ Before publishing any page, read it once and answer these:
 6. Are there any superlatives, buzzwords, or marketing-only words ("best", "world-class", "robust", "seamless")?
 7. Does the TL;DR actually save the reader from reading the page when they only need the gist?
 8. If a sentence says nothing, is it cut?
+9. Are any of the [tropes](https://tropes.fyi/tropes-md) patterns present? If more than one is, the piece is slop — fix it.
+10. Does the prose sound like Chris Hart, or like an LLM imitating Chris Hart?
 
 If any answer is "no" or "sort of", fix it before publishing.
 

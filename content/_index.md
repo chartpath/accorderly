@@ -1,27 +1,33 @@
 ---
-title: Accorderly
+title:
 toc: false
 ---
 
-I'm **Chris Hart**. I run Accorderly as a one-person consulting practice — every call, every commit, every customer interview is with me. There is no agency behind this site, no account manager, no juniors to hand work off to.
+I'm Chris Hart. I run Accorderly as a one-person consulting practice for small product teams. I do the Discovery, the Design, the DevOps, and the writing. There is no agency or team behind this site — every email, every call, every commit is with me.
 
-What I do is small-team software delivery: continuous Discovery, Design, and DevOps, run in parallel rather than as three hand-offs.
+If your engagement needs more than one senior engineer at a time, I'd rather tell you in the first call than pretend I can scale.
 
-{{< hextra/hero-button text="Get in touch →" link="/contact/" >}}
+## What I work on
 
-## How I work
+Small-team software delivery, structured around three continuous activities — Discovery, Design, DevOps — that run in parallel rather than as phases. The model is a synthesis I picked up from other people's work, not something I invented:
 
-- **One senior person end to end.** You email me, I reply. You book a call, you get me. You read a retro, I wrote it.
-- **Continuous Discovery** — a weekly habit of customer interviews feeding an [Opportunity Solution Tree](https://www.producttalk.org/opportunity-solution-trees/), drawn from Teresa Torres' *Continuous Discovery Habits*
-- **Shape Up the work** — every engagement starts with a shaped pitch: rough, solved, bounded, with an appetite in weeks not estimates (per [Ryan Singer](https://basecamp.com/shapeup))
-- **Ship small, ship behind flags, ship every week** — the cadence from the [Design Council's Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) and [The DevOps Handbook](https://itrevolution.com/the-devops-handbook/) (Kim, Humble, Debois, Willis, Forsgren)
-- **Plain language in everything that leaves my laptop.** The accessibility guideline is how I write, not a marketing claim
+- **Discovery** is the weekly habit of customer interviews feeding an [Opportunity Solution Tree](https://www.producttalk.org/opportunity-solution-trees/), in the sense Teresa Torres describes in *Continuous Discovery Habits*.
+- **Design** is shaping the work before any code is written, in the sense [Ryan Singer uses Shape Up](https://basecamp.com/shapeup) at Basecamp, layered on top of the [UK Design Council's Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) which is the model that names the shape.
+- **DevOps** is the build / ship / observe loop, in the sense of [The DevOps Handbook](https://itrevolution.com/the-devops-handbook/) and The Three Ways. The reason it's a parallel loop rather than a final phase is the [shift-left idea](https://en.wikipedia.org/wiki/Shift-left_testing) (Larry Smith, 2001): do the things at the end of the timeline earlier, in parallel with the things at the start.
 
-I do not run a team. If your engagement needs more than one senior engineer at a time, I will tell you in the first call and refer you to someone else rather than scale up by hiring.
+If any of that sounds right and you want to talk, [email me](mailto:hello@accorderly.com) or [book a call](https://cal.eu/accorderly).
+
+## What engagements look like
+
+- **Fixed scope** — when the problem is well-defined and the answer is mostly known.
+- **Retainer** — when you need a steady delivery partner for a quarter or more.
+- **Hourly** — when the work is open-ended and you want someone senior on call.
+
+The first conversation is short, free, and ends with one of three outcomes: a clear next step, a polite no, or a referral to someone better suited.
 
 ## The triple diamond
 
-Each diamond runs on its own clock, but they overlap. The point of running them together is to keep decisions close to the work and to keep the work close to the user.
+Each diamond runs on its own clock, but they overlap. The point of running them together is to keep decisions close to the work, and the work close to the user. The three pages below describe each one in detail.
 
 {{< cards >}}
   {{< card link="docs/process/discovery" title="Discovery" icon="search" subtitle="Continuous customer interviews, an Opportunity Solution Tree, and one working hypothesis a week." >}}
@@ -29,16 +35,12 @@ Each diamond runs on its own clock, but they overlap. The point of running them 
   {{< card link="docs/process/devops" title="DevOps" icon="cog" subtitle="Build, ship, observe — a tight loop on CI/CD, telemetry, and small changes behind flags." >}}
 {{< /cards >}}
 
-## How engagements start
+If after reading the cards you think the model might fit your situation, the next step is a 30-minute call.
 
-- **Fixed scope** — when the problem is well-defined and the answer is mostly known
-- **Retainer** — when you need a steady delivery partner for a quarter or more
-- **Hourly** — when the work is open-ended and you want someone senior on call
+{{< hextra/hero-button text="Book a call →" link="/contact/" >}}
 
-The first conversation is short, free, and ends with one of three outcomes: a clear next step, a polite no, or a referral to someone better suited. If I am not the right person for the work, I'd rather say so up front than take the engagement.
-
-## Reach me directly
+## Reach me
 
 - **Email** — [hello@accorderly.com](mailto:hello@accorderly.com)
 - **Book a call** — [cal.eu/accorderly ↗](https://cal.eu/accorderly)
-- **LinkedIn** — [Accorderly on LinkedIn ↗](https://www.linkedin.com/company/accorderly/) or [my profile ↗](https://www.linkedin.com/in/chartpath/)
+- **LinkedIn** — [Accorderly ↗](https://www.linkedin.com/company/accorderly/) or [my profile ↗](https://www.linkedin.com/in/chartpath/)
