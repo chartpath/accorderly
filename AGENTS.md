@@ -40,6 +40,13 @@ If you changed prose, also do a manual read against the *Plain-language writing 
 
 The whole site should read like a clear note from one person to another: short sentences, everyday words, one idea per paragraph, no marketing fluff. This section used to live at `content/docs/accessibility.md` as a public page; it was moved here because the guidance is for the agent / author, not for site visitors.
 
+### Authorship
+
+- The human contributor must always edit and rewrite any draft prose themselves before committing. Anything an agent writes is a first draft, not finished copy.
+- AI cannot be trusted to write well on its own. Treat generated prose as material to react to, not as text to ship.
+- Unless the user's prompt is very specific, it is fine — and often better — to leave a section as a placeholder instead of guessing. Write a short note that names the topic, the context, and what the section needs to say, and let the human fill it in their own voice.
+- A concrete placeholder beats mediocre auto-generated copy. When in doubt, mark the gap and stop.
+
 ### Plain language
 
 - Short sentences. Aim for under 20 words. Break long ones in half.
@@ -184,13 +191,13 @@ Production deploy is **GitHub Pages**, not bunny.net. The workflow reads the bas
 
 A bunny.net Storage Zone + Pull Zone deploy was the original plan but is deferred. If it comes back, restore it as a workflow sibling — the artifact (`public/`) is identical.
 
-## Contact info (must stay consistent in three places)
+## Contact info (must stay consistent)
 
 - Email: `hello@accorderly.com`
 - Booking: `https://cal.eu/accorderly`
 - LinkedIn: `https://www.linkedin.com/company/accorderly/`
 
-When updating any one of these, edit all three of: `content/_index.md`, `content/about.md`, `content/contact.md`. `grep -rE 'hello@|cal\.eu|linkedin\.com/company/accorderly' content/` is the cheap verification.
+Contact info now lives in one place: `content/_index.md` (the "Reach me" section). The old `content/about.md` and `content/contact.md` pages were folded into the homepage; if those pages are reintroduced, the contact details must match `content/_index.md`. `grep -rE 'hello@|cal\.eu|linkedin\.com/company/accorderly' content/` is the cheap verification.
 
 ## Repo conventions
 
@@ -202,6 +209,9 @@ When updating any one of these, edit all three of: `content/_index.md`, `content
 
 ## When stuck
 
-1. Look at the hextra theme layout at `~/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/imfing/hextra@v0.12.3/layouts/`. That's the source of truth for shortcodes, partials, and what each one expects. Docstrings inside the templates are worth reading.
-2. Site params Hextra exposes are listed in `themes/.../data/` (icons.yaml) and `themes/.../layouts/_shortcodes/` (shortcode files).
-3. The `content/docs/accessibility.md` rule applies to any new prose.
+**Hard rule: when in doubt about a Hextra feature, shortcode, layout, or parameter, read the official Hextra docs at <https://imfing.github.io/hextra/docs/> first, before guessing or digging only in the cache.** The docs are the source of truth for how the theme is meant to be used; the cached templates confirm what a specific version actually does.
+
+1. Check the Hextra docs at <https://imfing.github.io/hextra/docs/> — shortcodes, layout params, configuration, and gotchas.
+2. Look at the hextra theme layout at `~/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/imfing/hextra@v0.12.3/layouts/`. That's the source of truth for shortcodes, partials, and what each one expects. Docstrings inside the templates are worth reading.
+3. Site params Hextra exposes are listed in `themes/.../data/` (icons.yaml) and `themes/.../layouts/_shortcodes/` (shortcode files).
+4. The `content/docs/accessibility.md` rule applies to any new prose.

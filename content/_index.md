@@ -3,9 +3,11 @@ title:
 toc: false
 ---
 
-I'm Chris Hart. I run Accorderly as a one-person consulting practice for small product teams. I work across three hats — product, design and UX research, and development — which is the role you'd call a CPTO, or a mercenary one: I embed in your team for the shape of an engagement, ship, and either stay or leave. There is no agency or team behind this site — every email, every call, every commit is with me.
+I'm Chris Hart. Accorderly is my one-person consulting practice for small product teams. My role covers product, design and UX research, and development. A set of responsibilities you'd usually call a CPTO. I embed in your team for the length of an engagement, ship work, and then either stay or leave. There is no agency or team behind this site. Every email, every call, every commit is with me.
 
 Smaller engagements are usually better, both for you and for me, but I am comfortable being one of several senior people on a larger engagement when the work calls for it.
+
+{{< logo-carousel >}}
 
 ## What I work on
 
@@ -26,6 +28,10 @@ If any of that sounds right and you want to talk, [email me](mailto:hello@accord
 
 The first conversation is short, free, and ends with one of three outcomes: a clear next step, a polite no, or a referral to someone better suited.
 
+## What you get
+
+> [Placeholder — Chris to write in his own voice. ~5 short bullets, sourced from the old `about.md` "What you get" section. Needs to cover: direct access to me (no support tiers, no escalation path); one person across Discovery, Design, and DevOps so no context is lost between roles; a weekly note covering what shipped, what was learned, and what's next; decisions captured where the work happens (issues, pull requests, the Opportunity Solution Tree) rather than in a separate doc nobody reads; plain language in everything that leaves my laptop.]
+
 ## The triple diamond
 
 Each diamond runs on its own clock, but they overlap. The point of running them together is to keep decisions close to the work, and the work close to the user. The three pages below describe each one in detail.
@@ -38,7 +44,7 @@ Each diamond runs on its own clock, but they overlap. The point of running them 
 
 If after reading the cards you think the model might fit your situation, the next step is a 30-minute call.
 
-{{< hextra/hero-button text="Book a call →" link="/contact/" >}}
+{{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}
 
 ## Reach me
 

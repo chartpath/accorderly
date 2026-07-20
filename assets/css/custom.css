@@ -1,0 +1,41 @@
+/* Accorderly theme overrides — loaded after Hextra's variables.css and main.css. */
+
+/* Slightly larger base type. A percentage on the root scales every rem-based
+   value (type, spacing, widths) proportionally and still respects the user's
+   browser font setting. 112.5% of a 16px default = 18px. */
+html {
+  font-size: 112.5%;
+}
+
+/* Breathing room above a standalone CTA button (the hero-button shortcode).
+   The button otherwise sits flush under the preceding paragraph, which has no
+   bottom margin. Cards are wrapped in a container, so this only hits a bare
+   top-level button. */
+.content > a.not-prose {
+  margin-top: 2rem;
+}
+
+/* Diagram figure — opts out of prose image rounding/auto-margins. */
+.acc-figure {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.acc-figure img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+}
+html.dark .acc-figure img {
+  border-color: #374151;
+}
+.acc-figure figcaption {
+  margin-top: .75rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+html.dark .acc-figure figcaption {
+  color: #9ca3af;
+}

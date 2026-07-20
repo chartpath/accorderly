@@ -20,15 +20,9 @@ markup:
 
 menu:
   main:
-    - name: About
-      pageRef: /about
-      weight: 1
     - name: Docs
       pageRef: /docs
-      weight: 2
-    - name: Contact
-      pageRef: /contact
-      weight: 3
+      weight: 1
 
 params:
   navbar:

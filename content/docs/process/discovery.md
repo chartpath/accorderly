@@ -32,8 +32,8 @@ This is the Continuous Discovery practice Teresa Torres describes in *Continuous
 
 ## Cadence
 
-- **One interview a week, minimum.** A solo engagement has fewer people to spread the load, so two or three a week is the realistic floor for a team that wants to learn quickly.
-- **The trio is the team.** In Torres' model the interview is run by a product trio (PM + designer + engineer). On a solo engagement I fill all three roles, with the user sitting in for "user research" — same idea, fewer seats.
+- **One interview a week, minimum.** Torres sets the baseline at one customer conversation a week. On a solo engagement, where there are fewer people to share the load, two or three a week is the realistic target for a team that wants to learn quickly.
+- **The trio is the team.** In Torres' model the interview is run by a product trio: a PM, a designer, and an engineer. On a solo engagement I play all three parts. The structure is the same; the headcount is not.
 - **OST updated Friday.** The tree is a living document; if it isn't being edited weekly, the team has stopped learning from customers.
 
 ## What I need from you
