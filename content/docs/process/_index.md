@@ -14,10 +14,13 @@ Three continuous activities — Discovery, Design, DevOps — run in parallel. T
 
 The Triple Diamond is a delivery model, not a methodology. Each diamond is a small, repeating loop: **diverge → converge → ship**. The three loops run at different speeds but never stop, which is why they overlap instead of handing off.
 
-<figure class="acc-figure">
-  <img src="/marketing/method/triple-diamond.webp" alt="The triple diamond: three diverge then converge beats covering Discovery, Design, and DevOps." width="1400" height="445" loading="lazy">
-  <figcaption>The triple diamond: three diverge&ndash;converge beats. Each diamond widens the option space, then narrows to a decision. The three run in parallel, not as phases.</figcaption>
-</figure>
+{{< acc-figure
+  src="marketing/method/triple-diamond.webp"
+  alt="The triple diamond: three diverge then converge beats covering Discovery, Design, and DevOps."
+  width="1400"
+  height="445"
+  caption="The triple diamond: three diverge-converge beats. Each diamond widens the option space, then narrows to a decision. The three run in parallel, not as phases."
+>}}
 
 The point of running them together is simple. Hand-offs lose context. Discoveries that happen after a decision is locked hurt. Ship pieces that nobody has asked for waste the team's time. Keeping all three alive at once shortens the gap between "we learned something" and "the user can see the change".
 

@@ -79,12 +79,12 @@
     <div class="acc-carousel-track">
       <div class="acc-carousel-group">
         {{- range hugo.Data.logos }}
-        <img src="{{ printf "/marketing/logos/%s" .file | relURL }}" alt="{{ .name }}" {{ with .class }}class="{{ . }}" {{ end }}width="100" height="20">
+        <img src="{{ printf "marketing/logos/%s" .file | relURL }}" alt="{{ .name }}" {{ with .class }}class="{{ . }}" {{ end }}width="100" height="20">
         {{- end }}
       </div>
       <div class="acc-carousel-group acc-dup" aria-hidden="true">
         {{- range hugo.Data.logos }}
-        <img src="{{ printf "/marketing/logos/%s" .file | relURL }}" alt="" {{ with .class }}class="{{ . }}" {{ end }}width="100" height="20">
+        <img src="{{ printf "marketing/logos/%s" .file | relURL }}" alt="" {{ with .class }}class="{{ . }}" {{ end }}width="100" height="20">
         {{- end }}
       </div>
     </div>

@@ -1,0 +1,14 @@
+{{- /* Figure with caption for diagrams. src is relative to static/ with no
+      leading slash so relURL can prepend the baseURL path when the site is
+      served from a subpath (e.g. chartpath.github.io/accorderly/). */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+<figure class="acc-figure">
+  <img src="{{ $src | relURL }}" alt="{{ $alt }}" {{ with $width }}width="{{ . }}" {{ end }}{{ with $height }}height="{{ . }}" {{ end }}loading="lazy">
+  {{- with $caption }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
