@@ -45,3 +45,7 @@ This is the Continuous Discovery practice Teresa Torres describes in *Continuous
 ## What comes next
 
 The working hypothesis feeds [Design](/docs/process/design/). Discovery does not stop when design starts — it continues in the background and the two loops read each other's notes.
+
+If this is the kind of help you need, the next step is a 30-minute call.
+
+{{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}

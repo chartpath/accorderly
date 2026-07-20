@@ -55,3 +55,5 @@ No big reveal. No phase-gate. Each loop ends every week. Some weeks the loops pr
 ## How engagements start
 
 A first conversation is short. We talk through what you need, what's blocking you, and what's already been tried. From there, one of three things happens next: a clear scope, a polite no, or a referral to someone better suited.
+
+{{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}

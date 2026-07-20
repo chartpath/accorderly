@@ -59,3 +59,7 @@ The phrase comes from Larry Smith's 2001 *Dr. Dobb's Journal* article on [shift-
 ## Where this loops back
 
 Every shipped slice becomes the next input for [Discovery](/docs/process/discovery/). Real usage is the cheapest source of new opportunities the team will ever have, and the only way to keep that source open is to keep shipping. Discovery, Design, and DevOps form a closed loop: customer interviews surface opportunities, shaping turns opportunities into pitches, DevOps turns pitches into evidence, evidence turns into the next interview question.
+
+If this is the kind of help you need, the next step is a 30-minute call.
+
+{{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}

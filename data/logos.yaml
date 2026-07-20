@@ -1,0 +1,16 @@
+- name: Google
+  file: google.svg
+- name: Meta
+  file: meta.svg
+- name: Verizon
+  file: verizon.svg
+- name: SC Johnson
+  file: scjohnson.svg
+  class: acc-h6
+- name: PepsiCo
+  file: pepsico.svg
+- name: Nordstrom
+  file: nordstrom.svg
+- name: LG
+  file: lg.svg
+  class: acc-h7

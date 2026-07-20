@@ -197,7 +197,7 @@ A bunny.net Storage Zone + Pull Zone deploy was the original plan but is deferre
 - Booking: `https://cal.eu/accorderly`
 - LinkedIn: `https://www.linkedin.com/company/accorderly/`
 
-Contact info now lives in one place: `content/_index.md` (the "Reach me" section). The old `content/about.md` and `content/contact.md` pages were folded into the homepage; if those pages are reintroduced, the contact details must match `content/_index.md`. `grep -rE 'hello@|cal\.eu|linkedin\.com/company/accorderly' content/` is the cheap verification.
+Contact info lives in one place: the `layouts/_shortcodes/reach-me.html` shortcode, which is used by `content/_index.md` (the "Reach me" section) and `content/docs/_index.md`. The old `content/about.md` and `content/contact.md` pages were folded into the homepage; if those pages are reintroduced, the contact details must match the shortcode. `grep -rE 'hello@|cal\.eu|linkedin\.com/company/accorderly' layouts/ content/` is the cheap verification.
 
 ## Repo conventions
 

@@ -1,7 +1,9 @@
 ---
-title:
+title: Solo consulting for small product teams
 toc: false
 ---
+
+{{< hero-headline >}}
 
 I'm Chris Hart. Accorderly is my one-person consulting practice for small product teams. My role covers product, design and UX research, and development. A set of responsibilities you'd usually call a CPTO. I embed in your team for the length of an engagement, ship work, and then either stay or leave. There is no agency or team behind this site. Every email, every call, every commit is with me.
 
@@ -48,6 +50,4 @@ If after reading the cards you think the model might fit your situation, the nex
 
 ## Reach me
 
-- **Email** — [hello@accorderly.com](mailto:hello@accorderly.com)
-- **Book a call** — [cal.eu/accorderly ↗](https://cal.eu/accorderly)
-- **LinkedIn** — [Accorderly ↗](https://www.linkedin.com/company/accorderly/) or [my profile ↗](https://www.linkedin.com/in/chartpath/)
+{{< reach-me >}}

@@ -10,3 +10,7 @@ Accorderly's process blends three continuous activities: Discovery, Design, and 
 {{< cards >}}
   {{< card link="process" title="Triple Diamond SDLC" icon="arrows-expand" subtitle="An overview of the three continuous activities and how they fit together." >}}
 {{< /cards >}}
+
+## Reach me
+
+{{< reach-me >}}

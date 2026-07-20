@@ -1,5 +1,6 @@
 {{- /* Infinite logo marquee, adapted from the vibefix.dev LogoCloudSection.
-      Pure CSS (no JS) — monochrome logos, edge fade, seamless loop, dark-mode aware. */ -}}
+      Pure CSS (no JS) — monochrome logos, edge fade, seamless loop, dark-mode aware.
+      Logos are maintained in data/logos.yaml; the group is rendered twice for the loop. */ -}}
 <style>
   .acc-carousel{
     --acc-c-border: #e5e7eb;
@@ -32,7 +33,10 @@
     align-items:center;
     animation:acc-scroll 40s linear infinite;
   }
-  .acc-carousel-track:hover{ animation-play-state:paused; }
+  /* Pause on hover of the whole strip, not the moving track — the track slides
+     out from under the cursor, which makes hover flicker and the loop look like
+     it restarts. */
+  .acc-carousel:hover .acc-carousel-track{ animation-play-state:paused; }
   .acc-carousel-group{
     display:flex;
     align-items:center;
@@ -56,31 +60,32 @@
     to{ transform:translateX(-50%); }
   }
   @media (prefers-reduced-motion:reduce){
-    .acc-carousel-track{ animation:none; }
+    .acc-carousel-track{
+      animation:none;
+      width:100%;
+      flex-wrap:wrap;
+      justify-content:center;
+      row-gap:1.25rem;
+    }
+    .acc-carousel-group{ flex-wrap:wrap; justify-content:center; }
+    .acc-carousel-group img{ margin-right:56px; }
+    .acc-carousel-group.acc-dup{ display:none; }
   }
 </style>
 
 <section class="acc-carousel" aria-label="Past consulting clients">
-  <p class="acc-carousel-caption">I&rsquo;ve consulted for teams at</p>
+  <p class="acc-carousel-caption">Product strategy and AI solution architecture for teams at</p>
   <div class="acc-carousel-viewport">
     <div class="acc-carousel-track">
       <div class="acc-carousel-group">
-        <img src="/marketing/logos/google.svg"   alt="Google"     width="100" height="20">
-        <img src="/marketing/logos/meta.svg"     alt="Meta"       width="100" height="20">
-        <img src="/marketing/logos/verizon.svg"  alt="Verizon"    width="100" height="20">
-        <img src="/marketing/logos/scjohnson.svg" alt="SC Johnson" class="acc-h6" width="100" height="24">
-        <img src="/marketing/logos/pepsico.svg"  alt="PepsiCo"    width="100" height="20">
-        <img src="/marketing/logos/nordstrom.svg" alt="Nordstrom" width="100" height="20">
-        <img src="/marketing/logos/lg.svg"       alt="LG"         class="acc-h7" width="100" height="28">
+        {{- range hugo.Data.logos }}
+        <img src="{{ printf "/marketing/logos/%s" .file | relURL }}" alt="{{ .name }}" {{ with .class }}class="{{ . }}" {{ end }}width="100" height="20">
+        {{- end }}
       </div>
-      <div class="acc-carousel-group" aria-hidden="true">
-        <img src="/marketing/logos/google.svg"   alt="" width="100" height="20">
-        <img src="/marketing/logos/meta.svg"     alt="" width="100" height="20">
-        <img src="/marketing/logos/verizon.svg"  alt="" width="100" height="20">
-        <img src="/marketing/logos/scjohnson.svg" alt="" class="acc-h6" width="100" height="24">
-        <img src="/marketing/logos/pepsico.svg"  alt="" width="100" height="20">
-        <img src="/marketing/logos/nordstrom.svg" alt="" width="100" height="20">
-        <img src="/marketing/logos/lg.svg"       alt="" class="acc-h7" width="100" height="28">
+      <div class="acc-carousel-group acc-dup" aria-hidden="true">
+        {{- range hugo.Data.logos }}
+        <img src="{{ printf "/marketing/logos/%s" .file | relURL }}" alt="" {{ with .class }}class="{{ . }}" {{ end }}width="100" height="20">
+        {{- end }}
       </div>
     </div>
   </div>

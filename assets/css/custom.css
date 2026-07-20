@@ -15,6 +15,14 @@ html {
   margin-top: 2rem;
 }
 
+/* Keep card titles aligned across a row when subtitles wrap to different line
+   counts. Hextra clamps subtitles at 3 lines (hx:line-clamp-3); reserving that
+   height for every subtitle makes the padding above and below symmetrical.
+   text-sm in Hextra is 0.875rem with a 1.25rem line-height, so 3 lines = 3.75rem. */
+.hextra-card-subtitle {
+  min-height: 3.75rem;
+}
+
 /* Diagram figure — opts out of prose image rounding/auto-margins. */
 .acc-figure {
   margin: 2.5rem 0;
