@@ -7,7 +7,11 @@
        class is applied to the <img> (e.g. "is-placeholder" opts the image
         out of the monochrome silhouette filter). flip="true" moves the
         figure to the left of the text on desktop; DOM order and mobile
-        stacking stay text-first. */ -}}
+        stacking stay text-first. src is relative to assets/ so Hugo can
+        resize the source to 1200px wide at build time — the raw files are
+        multi-MB Unsplash originals and the figure never renders wider
+        than ~600px. width/height come from the resized image so the
+        browser reserves the box before the lazy load fires. */ -}}
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
 {{- $class := .Get "class" -}}
@@ -38,6 +42,11 @@
     {{- end }}
   </div>
   <figure class="acc-aside-figure">
-    <img src="{{ $src | relURL }}" alt="{{ $alt }}" {{ with $class }}class="{{ . }}" {{ end }}loading="lazy">
+    {{- with resources.Get $src }}
+      {{- $resized := .Resize "1200x" }}
+      <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" {{ with $class }}class="{{ . }}" {{ end }}loading="lazy">
+    {{- else }}
+      {{- errorf "acc-aside: image %q not found in assets/" $src -}}
+    {{- end }}
   </figure>
 </div>
