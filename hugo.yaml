@@ -23,6 +23,9 @@ menu:
     - name: Docs
       pageRef: /docs
       weight: 1
+    - name: Book a call
+      url: https://cal.eu/accorderly
+      weight: 2
 
 params:
   navbar:
@@ -40,6 +43,6 @@ params:
     enable: true
     base: "https://github.com/chartpath/accorderly/edit/main/content"
 
-  description: "Solo tech consulting. Continuous Discovery, Design, and DevOps, run in parallel rather than as three hand-offs. From Chris Hart in Moncton, New Brunswick."
+  description: "Solo tech consulting from Chris Hart in Moncton, New Brunswick. Continuous Discovery, Design, and DevOps run in parallel, plus AI systems that can explain their answers."
   images:
     - images/og-card.png

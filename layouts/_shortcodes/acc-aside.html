@@ -1,0 +1,43 @@
+{{- /* Aside — image beside a section's main paragraph on desktop, stacked
+       on mobile. Text comes first in the DOM (and on the left on desktop),
+       so screen readers and visible readers encounter it before the image.
+       Alt text on the image carries the same idea for assistive tech. src
+       is relative to static/ with no leading slash so relURL can prepend
+       the baseURL path when the site is served from a subpath. The optional
+       class is applied to the <img> (e.g. "is-placeholder" opts the image
+        out of the monochrome silhouette filter). flip="true" moves the
+        figure to the left of the text on desktop; DOM order and mobile
+        stacking stay text-first. */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $class := .Get "class" -}}
+{{- /* markdownify on a single line of plain text (no blank-line paragraph
+        break inside the shortcode) returns the bare string rather than a
+        <p>-wrapped paragraph. That leaves the body cell the height of
+        inline text, which collapses the row enough that the lazy-loaded
+        image in the sibling figure never gets pulled in. Wrap unwrapped
+        output so the cell always has block-level content. Note: nested
+        shortcodes in .Inner get their HTML escaped by markdownify, so a
+        CTA must be passed as buttonText/buttonLink params, not as a
+        nested hextra/hero-button. */ -}}
+{{- $body := .Inner | chomp | markdownify -}}
+{{- if not (or (hasPrefix $body "<p") (hasPrefix $body "<ul") (hasPrefix $body "<ol") (hasPrefix $body "<h") (hasPrefix $body "<div") (hasPrefix $body "<figure") (hasPrefix $body "<table") (hasPrefix $body "<pre") (hasPrefix $body "<blockquote") (hasPrefix $body "<hr")) -}}
+  {{- $body = printf "<p>%s</p>" $body | safeHTML -}}
+{{- end -}}
+{{- $buttonText := .Get "buttonText" -}}
+{{- $buttonLink := .Get "buttonLink" -}}
+<div class="acc-aside{{ if .Get "flip" }} acc-aside-flip{{ end }}">
+  <div class="acc-aside-body">
+    {{ $body }}
+    {{- with $buttonText }}
+    <div class="acc-aside-cta"><a
+      href="{{ $buttonLink }}"
+      class="not-prose hx:font-medium hx:cursor-pointer hx:px-6 hx:py-3 hx:rounded-full hx:text-center hx:text-white hx:inline-block hx:bg-primary-600 hx:hover:bg-primary-700 hx:hextra-focus-visible hx:dark:bg-primary-600 hx:dark:hover:bg-primary-700 hx:transition-all hx:ease-in hx:duration-200"
+      {{ if hasPrefix $buttonLink "http" }}target="_blank" rel="noreferrer"{{ end -}}
+    >{{ . }}</a></div>
+    {{- end }}
+  </div>
+  <figure class="acc-aside-figure">
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}" {{ with $class }}class="{{ . }}" {{ end }}loading="lazy">
+  </figure>
+</div>

@@ -8,3 +8,6 @@ resources/
 
 # Local tooling artefacts (e.g. playwright session files)
 .playwright-cli/
+
+# macOS
+.DS_Store

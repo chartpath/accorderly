@@ -7,6 +7,40 @@ html {
   font-size: 112.5%;
 }
 
+/* Monospace for body prose — the "one person with a text editor" look.
+   ui-monospace uses the OS UI mono (SF Mono on Apple, Cascadia Mono on
+   Windows 11); the rest of the stack is fallback. No font is downloaded.
+   Headings and all UI chrome (navbar, sidebar, buttons, cards, bento,
+   carousel) stay in Hextra's system sans — the contrast gives the mono
+   room to speak without making the whole page shout. Scoped to text
+   elements so layout blocks are untouched. */
+.content > p,
+.content li,
+.content blockquote,
+.acc-aside p {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace;
+}
+
+/* Cap the prose measure. The content column is 72rem (110+ characters at the
+   root size above) — too wide to read comfortably. 68ch keeps lines in the
+   60-75 character sweet spot. Cards, bento, carousel, figures, and the
+   reach-me block are not text elements, so they keep full width. */
+.content p,
+.content li,
+.content blockquote,
+.content figcaption {
+  max-width: 68ch;
+}
+
+/* Underline inline prose links — color alone is easy to miss in running text.
+   Scoped to prose so nav, buttons, and cards are unaffected. */
+.content p a:not(.not-prose),
+.content li a:not(.not-prose),
+.content blockquote a:not(.not-prose) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 /* Breathing room above a standalone CTA button (the hero-button shortcode).
    The button otherwise sits flush under the preceding paragraph, which has no
    bottom margin. Cards are wrapped in a container, so this only hits a bare
@@ -46,4 +80,205 @@ html.dark .acc-figure img {
 }
 html.dark .acc-figure figcaption {
   color: #9ca3af;
+}
+
+/* Aside layout — image beside a section's main paragraph on desktop,
+   stacked on mobile. Text first in DOM and on the left on desktop, so
+   screen readers and visible readers encounter it before the image.
+   Card frame matches acc-figure / acc-reach-me; the brightness filter
+   matches the carousel so the figures flip with the rest of the chrome
+   in dark mode (the SVG stroke is fixed #1f2937 and rendered as a
+   silhouette, then inverted on dark backgrounds). */
+.acc-aside {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1.5rem 0 2rem;
+}
+@media (min-width: 768px) {
+  .acc-aside {
+    grid-template-columns: 1fr 1fr;
+  }
+  .acc-aside.acc-aside-flip .acc-aside-figure {
+    order: -1;
+  }
+}
+.acc-aside-body {
+  min-width: 0;
+}
+.acc-aside-figure {
+  min-width: 0;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+  background: #ffffff;
+}
+html.dark .acc-aside-figure {
+  border-color: #374151;
+  background: #1f2937;
+}
+.acc-aside img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+}
+/* CTA inside an aside body — a div (not a <p>) so it stays in the sans UI
+   font and outside the prose-link underline rule. */
+.acc-aside-cta {
+  margin-top: 1rem;
+}
+
+/* `.is-placeholder` opts INTO the monochrome silhouette treatment, matching
+   the carousel logos. Default aside images render in their natural color;
+   this is for stand-in graphics (e.g. a future shaded block during template
+   work) that should look consistent with the rest of the chrome. */
+.acc-aside img.is-placeholder {
+  filter: brightness(0);
+}
+html.dark .acc-aside img.is-placeholder {
+  filter: brightness(0) invert(1);
+}
+
+/* Hero headline — reserves two lines of text-4xl (2.25rem font, 2.5rem
+   line-height) so the rotating taglines (hero-headline shortcode) never shift
+   the page when a longer one wraps. Flex keeps one-line taglines centered. */
+.acc-hero-headline {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Homepage section rhythm — the five h2 sections on the homepage read as
+   distinct blocks. Scoped to .acc-home (set in layouts/home.html) so docs
+   pages keep the theme defaults. */
+.acc-home h2 {
+  margin-top: 3.5rem;
+}
+
+/* Contact block (reach-me shortcode) — same border treatment as acc-figure,
+   so the page ends with a deliberate block instead of a bare list. */
+.acc-reach-me {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+}
+html.dark .acc-reach-me {
+  border-color: #374151;
+}
+.acc-reach-me ul {
+  margin: 0;
+}
+
+/* Bento grid on the homepage ("What engagements look like"). Raw HTML in
+   content/_index.md; same border treatment as acc-figure / acc-reach-me.
+   One column on mobile, two on small screens, three on wide — the closing
+   cell (.acc-bento-wide) spans the row at every breakpoint. */
+.acc-bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.acc-bento-cell {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+}
+html.dark .acc-bento-cell {
+  border-color: #374151;
+}
+.acc-bento-cell h3 {
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+}
+.acc-bento-cell p {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .acc-bento { grid-template-columns: repeat(2, 1fr); }
+  .acc-bento-wide { grid-column: span 2; }
+}
+@media (min-width: 880px) {
+  .acc-bento { grid-template-columns: repeat(3, 1fr); }
+  .acc-bento-wide { grid-column: span 2; }
+}
+
+/* Logo carousel (logo-carousel shortcode) — monochrome logos, edge fade,
+   seamless loop, dark-mode aware. Lives here rather than in an inline <style>
+   in the shortcode so it ships once in the minified bundle. */
+.acc-carousel{
+  --acc-c-border: #e5e7eb;
+  --acc-c-muted: #6b7280;
+  margin: 2.5rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--acc-c-border);
+  border-bottom: 1px solid var(--acc-c-border);
+}
+html.dark .acc-carousel{
+  --acc-c-border: #374151;
+  --acc-c-muted: #9ca3af;
+}
+.acc-carousel .acc-carousel-caption{
+  text-align:center;
+  max-width:none;
+  font-size:.8rem;
+  font-weight:500;
+  color:var(--acc-c-muted);
+  margin:0 0 1.25rem;
+  letter-spacing:.01em;
+}
+.acc-carousel-viewport{
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image:linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.acc-carousel-track{
+  display:flex;
+  width:max-content;
+  align-items:center;
+  animation:acc-scroll 40s linear infinite;
+}
+/* Pause on hover of the whole strip, not the moving track — the track slides
+   out from under the cursor, which makes hover flicker and the loop look like
+   it restarts. */
+.acc-carousel:hover .acc-carousel-track{ animation-play-state:paused; }
+.acc-carousel-group{
+  display:flex;
+  align-items:center;
+  flex:0 0 auto;
+}
+.acc-carousel-group img{
+  height:1.25rem;          /* h-5 */
+  width:auto;
+  margin:0;
+  margin-right:112px;
+  border-radius:0;          /* override Hextra .content img rounding */
+  filter:brightness(0);
+}
+html.dark .acc-carousel-group img{
+  filter:brightness(0) invert(1);
+}
+.acc-carousel-group img.acc-h6{ height:1.5rem; }   /* SC Johnson */
+.acc-carousel-group img.acc-h7{ height:1.75rem; }  /* LG */
+@keyframes acc-scroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+@media (prefers-reduced-motion:reduce){
+  .acc-carousel-track{
+    animation:none;
+    width:100%;
+    flex-wrap:wrap;
+    justify-content:center;
+    row-gap:1.25rem;
+  }
+  .acc-carousel-group{ flex-wrap:wrap; justify-content:center; }
+  .acc-carousel-group img{ margin-right:56px; }
+  .acc-carousel-group.acc-dup{ display:none; }
 }

@@ -17,15 +17,13 @@ The framing comes from [The DevOps Handbook](https://itrevolution.com/the-devops
 
 - **The First Way — Flow.** Move work from commit to production in a predictable, automated pipeline. The goal is short lead time, not heroic effort.
 - **The Second Way — Feedback.** Amplify feedback from production back into the team. Telemetry, monitoring, and incident review close the loop so the next commit is informed.
-- **The Third Way — Continuous Learning.** A culture that experiments, takes risks, and converts local learning into global improvement. The reason the loop never stops is the team's job is to get better at running the loop.
+- **The Third Way — Continuous Learning.** A culture that experiments, takes risks, and converts local learning into global improvement. The loop never stops because the team's job is to get better at running it.
 
 This third diamond is where DORA's four metrics live: **deployment frequency, lead time for changes, change failure rate, and failed deployment recovery time.** A solo engagement has less ceremony than a large team, but the same metrics and the same feedback loop.
 
 ## Why a third diamond (shift-left)
 
-The Double Diamond ends at delivery — the second diamond converges on what gets built. Treating delivery as a one-shot event at the end loses the answer to the only question that matters: *does it actually work for the people we said it would work for?* The way to keep that answer honest is to start the build / ship / observe loop on day one, not at the end of the project. That is the "shift left" approach: do the things later in the lifecycle earlier, in parallel with the things that come before them.
-
-The phrase comes from Larry Smith's 2001 *Dr. Dobb's Journal* article on [shift-left testing](https://en.wikipedia.org/wiki/Shift-left_testing), where "left" means earlier on the project timeline. The same principle applied to security is the basis of DevSecOps; applied to delivery it is the basis of the DevOps diamond on this site. CI/CD, telemetry, and small changes behind flags are not a final phase — they run alongside Discovery and Design, all the time.
+The Double Diamond ends at delivery. Treating delivery as a one-shot event loses the only question that matters: *does it actually work for the people we said it would work for?* The fix is the [shift-left idea](https://en.wikipedia.org/wiki/Shift-left_testing) (Larry Smith, 2001): do the things later in the lifecycle earlier, in parallel with what comes before. Applied here, that means the build / ship / observe loop starts on day one, alongside Discovery and Design — CI/CD, telemetry, and small changes behind flags are not a final phase.
 
 ## What happens
 
@@ -47,7 +45,7 @@ The phrase comes from Larry Smith's 2001 *Dr. Dobb's Journal* article on [shift-
 - **One shipping event per week**, with a hard cap on Friday afternoon.
 - **Two short planning conversations**: one on Monday morning, one mid-week.
 - **A 30-minute retro at the end of every week** — over the numbers, not over feelings.
-- **Incident response is the exception, not the cadence.** When something breaks, the loop compresses until it is fixed; otherwise the steady-state rhythm holds.
+- **Incident response is the exception, not the cadence.** When something breaks, the loop compresses until it is fixed.
 
 ## What I need from you
 

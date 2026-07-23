@@ -1,14 +1,13 @@
 {{- /* Homepage hero: eyebrow + h1. The first tagline renders server-side so the
       page always has a stable h1; inline JS swaps in a random one on each load. */ -}}
 {{- $taglines := slice
-  "User needs beat assumptions."
-  "Problem understanding before solutioning."
-  "Discovery before delivery."
-  "Ship small, learn every week."
-  "Research, design, and code. One person."
+  "User needs are more valuable than assumptions."
+  "Understand problems before investing in solutions."
+  "Discovery comes before before delivery."
+  "Research, UX, and code."
 -}}
-<p class="hx:text-center hx:text-sm hx:font-medium hx:mt-8 hx:mb-2 hx:text-gray-500 hx:dark:text-gray-400">Accorderly &mdash; Chris Hart</p>
-<h1 id="acc-hero-headline" class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ index $taglines 0 }}</h1>
+<div class="hx:text-center hx:text-sm hx:font-medium hx:mt-8 hx:mb-2 hx:text-gray-500 hx:dark:text-gray-400">Product strategy execution for teams in a hurry.</div>
+<h1 id="acc-hero-headline" class="acc-hero-headline hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ index $taglines 0 }}</h1>
 <script>
   (function () {
     var taglines = {{ $taglines | jsonify | safeJS }};

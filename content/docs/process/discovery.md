@@ -12,7 +12,7 @@ A weekly habit of customer interviews, an [Opportunity Solution Tree](https://ww
 
 ## What this is
 
-Discovery is the loop that keeps the team honest about the problem. It runs from day one of the engagement until the last day, and it answers the same question on repeat: *what problem are we actually solving, and for whom*?
+Discovery is the loop that keeps the team honest about the problem. It runs from day one to the last and answers the same question on repeat: *what problem are we actually solving, and for whom*?
 
 This is the Continuous Discovery practice Teresa Torres describes in *Continuous Discovery Habits* (2021): at a minimum, **weekly touchpoints with customers by the team that's building the product**. The cadence is what makes it different from one-off research. A weekly conversation does not produce a clean answer; it produces a small, falsifiable hypothesis the team can act on before the next conversation.
 
@@ -28,11 +28,11 @@ This is the Continuous Discovery practice Teresa Torres describes in *Continuous
 - An OST you can show to stakeholders without translation: it shows the team's thinking, not just their conclusions.
 - A weekly log of decisions and what they were based on.
 - A working hypothesis the team can defend with evidence, not opinion.
-- Customer voice recorded, transcribed, and searchable — so the next person who joins has the same context the rest of the team has.
+- Customer voice recorded, transcribed, and searchable — so anyone who joins later has the same context.
 
 ## Cadence
 
-- **One interview a week, minimum.** Torres sets the baseline at one customer conversation a week. On a solo engagement, where there are fewer people to share the load, two or three a week is the realistic target for a team that wants to learn quickly.
+- **One interview a week, minimum.** Torres sets the baseline at one customer conversation a week. On a solo engagement, two or three a week is the realistic target for a team that wants to learn quickly.
 - **The trio is the team.** In Torres' model the interview is run by a product trio: a PM, a designer, and an engineer. On a solo engagement I play all three parts. The structure is the same; the headcount is not.
 - **OST updated Friday.** The tree is a living document; if it isn't being edited weekly, the team has stopped learning from customers.
 

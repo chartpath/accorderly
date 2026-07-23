@@ -1,80 +1,10 @@
 {{- /* Infinite logo marquee, adapted from the vibefix.dev LogoCloudSection.
       Pure CSS (no JS) — monochrome logos, edge fade, seamless loop, dark-mode aware.
-      Logos are maintained in data/logos.yaml; the group is rendered twice for the loop. */ -}}
-<style>
-  .acc-carousel{
-    --acc-c-border: #e5e7eb;
-    --acc-c-muted: #6b7280;
-    margin: 2.5rem 0;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--acc-c-border);
-    border-bottom: 1px solid var(--acc-c-border);
-  }
-  html.dark .acc-carousel{
-    --acc-c-border: #374151;
-    --acc-c-muted: #9ca3af;
-  }
-  .acc-carousel-caption{
-    text-align:center;
-    font-size:.8rem;
-    font-weight:500;
-    color:var(--acc-c-muted);
-    margin:0 0 1.25rem;
-    letter-spacing:.01em;
-  }
-  .acc-carousel-viewport{
-    overflow:hidden;
-    -webkit-mask-image:linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
-    mask-image:linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
-  }
-  .acc-carousel-track{
-    display:flex;
-    width:max-content;
-    align-items:center;
-    animation:acc-scroll 40s linear infinite;
-  }
-  /* Pause on hover of the whole strip, not the moving track — the track slides
-     out from under the cursor, which makes hover flicker and the loop look like
-     it restarts. */
-  .acc-carousel:hover .acc-carousel-track{ animation-play-state:paused; }
-  .acc-carousel-group{
-    display:flex;
-    align-items:center;
-    flex:0 0 auto;
-  }
-  .acc-carousel-group img{
-    height:1.25rem;          /* h-5 */
-    width:auto;
-    margin:0;
-    margin-right:112px;
-    border-radius:0;          /* override Hextra .content img rounding */
-    filter:brightness(0);
-  }
-  html.dark .acc-carousel-group img{
-    filter:brightness(0) invert(1);
-  }
-  .acc-carousel-group img.acc-h6{ height:1.5rem; }   /* SC Johnson */
-  .acc-carousel-group img.acc-h7{ height:1.75rem; }  /* LG */
-  @keyframes acc-scroll{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
-  }
-  @media (prefers-reduced-motion:reduce){
-    .acc-carousel-track{
-      animation:none;
-      width:100%;
-      flex-wrap:wrap;
-      justify-content:center;
-      row-gap:1.25rem;
-    }
-    .acc-carousel-group{ flex-wrap:wrap; justify-content:center; }
-    .acc-carousel-group img{ margin-right:56px; }
-    .acc-carousel-group.acc-dup{ display:none; }
-  }
-</style>
+      Logos are maintained in data/logos.yaml; the group is rendered twice for the loop.
+      Styles (.acc-carousel) live in assets/css/custom.css. */ -}}
 
-<section class="acc-carousel" aria-label="Past consulting clients">
-  <p class="acc-carousel-caption">Product strategy and AI solution architecture for teams at</p>
+<section class="acc-carousel" aria-label="Companies Chris has consulted for">
+  <p class="acc-carousel-caption">I've consulted for product teams at</p>
   <div class="acc-carousel-viewport">
     <div class="acc-carousel-track">
       <div class="acc-carousel-group">

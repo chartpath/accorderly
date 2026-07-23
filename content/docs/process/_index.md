@@ -8,7 +8,7 @@ sidebar:
 
 ## TL;DR
 
-Three continuous activities — Discovery, Design, DevOps — run in parallel. The model is a synthesis I pulled together from other people's published work; the third diamond (DevOps) is the only one of the three I added, and the reason for it is the shift-left idea described below.
+Three continuous activities — Discovery, Design, DevOps — run in parallel. The model is a synthesis of other people's published work; I added the third diamond (DevOps), for the shift-left reason below.
 
 ## What it is, and what it isn't
 
@@ -22,7 +22,7 @@ The Triple Diamond is a delivery model, not a methodology. Each diamond is a sma
   caption="The triple diamond: three diverge-converge beats. Each diamond widens the option space, then narrows to a decision. The three run in parallel, not as phases."
 >}}
 
-The point of running them together is simple. Hand-offs lose context. Discoveries that happen after a decision is locked hurt. Ship pieces that nobody has asked for waste the team's time. Keeping all three alive at once shortens the gap between "we learned something" and "the user can see the change".
+Hand-offs lose context. Discoveries that happen after a decision is locked hurt. Shipping pieces nobody asked for wastes the team's time. Keeping all three alive at once shortens the gap between "we learned something" and "the user can see the change".
 
 It is called "triple diamond" because it is a synthesis of three models that each only describe one diamond:
 
@@ -30,13 +30,13 @@ It is called "triple diamond" because it is a synthesis of three models that eac
 - **Design** — the [UK Design Council's Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/) (Discover / Define / Develop / Deliver) and [Shape Up](https://basecamp.com/shapeup) by Ryan Singer
 - **DevOps** — [The DevOps Handbook](https://itrevolution.com/the-devops-handbook/) (Kim, Humble, Debois, Willis, Forsgren) and The Three Ways
 
-Each of those sources is for larger teams. The triple-diamond reframing keeps the same habits but compresses them onto one person — me — which is what a solo engagement can afford. I run all three loops myself rather than splitting them across roles.
+Each of those sources is for larger teams. The triple-diamond reframing keeps the same habits but compresses them onto one person — me — which is what a solo engagement can afford.
 
 ## Why triple, and not double
 
-The Double Diamond ends at delivery — the second diamond converges on what gets built. In practice, the moment something is shipped, the question "does it actually work for the people we said it would work for?" starts. That is its own loop, and it is where DevOps earns its keep. Adding a third diamond for build / ship / observe is the smallest change that keeps the answer honest without inventing a new model.
+The Double Diamond ends at delivery — the second diamond converges on what gets built. The moment something ships, the question "does it actually work for the people we said it would work for?" starts. That is its own loop, and it is where DevOps earns its keep. Adding a third diamond for build / ship / observe is the smallest change that keeps the answer honest without inventing a new model.
 
-The reason for keeping it a parallel loop rather than a serial phase is the [shift-left idea](https://en.wikipedia.org/wiki/Shift-left_testing) (Larry Smith, 2001): do the things that traditionally live at the end of the timeline earlier, in parallel with the things that come before. Shift-left testing means tests run with every commit, not at release. Shift-left delivery — the third diamond — means the build, ship, and observe loop runs alongside Discovery and Design from day one, not after the design is "done".
+The reason for keeping it a parallel loop rather than a serial phase is the [shift-left idea](https://en.wikipedia.org/wiki/Shift-left_testing) (Larry Smith, 2001): do the things at the end of the timeline earlier, in parallel with what comes before. Shift-left testing means tests run with every commit, not at release. Shift-left delivery — the third diamond — means the build, ship, and observe loop runs alongside Discovery and Design from day one, not after the design is "done".
 
 The TL;DR of shift-left, applied here: build the production feedback loop before you have any production, not after.
 
@@ -57,6 +57,6 @@ No big reveal. No phase-gate. Each loop ends every week. Some weeks the loops pr
 
 ## How engagements start
 
-A first conversation is short. We talk through what you need, what's blocking you, and what's already been tried. From there, one of three things happens next: a clear scope, a polite no, or a referral to someone better suited.
+A first conversation is short. We talk through what you need, what's blocking you, and what's already been tried. From there: a clear scope, a polite no, or a referral to someone better suited.
 
 {{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}

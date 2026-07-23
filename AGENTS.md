@@ -17,8 +17,10 @@ If a build fails with a shortcode or icon error, it is almost always a Hextra AP
 # First-time / after changing go.mod
 hugo mod tidy
 
-# Dev server — bind 0.0.0.0 lets you hit it from another device on the LAN
-hugo server --bind 0.0.0.0 -p 1313 --disableFastRender
+# Dev server — bind 0.0.0.0 lets you hit it from another device on the LAN.
+# --poll 1s is required: the editor's host shares this filesystem via a mount
+# that does not propagate fs events, so fsnotify alone never fires.
+hugo server --bind 0.0.0.0 -p 1313 --disableFastRender --poll 1s
 
 # Production build (mirrors CI)
 hugo --gc --minify --baseURL https://accorderly.com/
@@ -152,9 +154,13 @@ If any answer is "no" or "sort of", fix it before publishing.
 
 Technical accessibility (WCAG, screen-reader semantics, keyboard nav, contrast) is a separate piece of work and is not the contract this section enforces. When that work starts, it will live in its own internal doc.
 
-## Hextra gotchas
+## Hugo and Hextra gotchas
 
 These are easy to get wrong on first contact:
+
+- **Asset paths in shortcodes: no leading slash.** `relURL` treats an input starting with `/` as already root-relative and will NOT prepend the baseURL path. The site deploys to a subpath (`chartpath.github.io/accorderly/`) until the custom domain is active, so `{{ "marketing/logos/x.svg" | relURL }}` works and `{{ "/marketing/logos/x.svg" | relURL }}` 404s. Same rule for raw HTML in content — prefer the `acc-figure` shortcode over a hand-written `<img src="/...">`.
+- **JSON inside `<script>` needs `safeJS`.** Go's html/template contextually escapes `{{ $slice | jsonify }}` into a *string containing JSON* when it appears inside a script tag, so `arr[i]` returns one character. Write `{{ $slice | jsonify | safeJS }}`.
+- **Data access.** `.Site.Data` / `site.Data` is deprecated as of Hugo 0.156; use `hugo.Data` (e.g. `range hugo.Data.logos`).
 
 - **Icons.** Names come from `themes/.../data/icons.yaml`. Heroicons-style names that are *missing* include `rocket`, `infinity`, `pencil`. Valid alternatives used here: `paper-airplane` (Delivery), `arrows-expand` (loop), `search` (Discovery), `pencil-alt` (Design), `book-open` (Accessibility).
 - **Hero shortcode is `{{< hextra/hero-section >}}` (and `-headline`, `-subtitle`, `-button`)**, not `{{< hero >}}`. There is no top-level `{{< hero >}}`; using one will fail with `template for shortcode "hero" not found`.
@@ -174,6 +180,11 @@ These are easy to get wrong on first contact:
 | Favicon / icons | `static/favicon.ico`, `static/favicon.svg`, `static/apple-touch-icon.png`, `static/images/accorderly-icon.svg` | sourced from the sibling `vibefix.dev` project |
 | Workflow | `.github/workflows/pages.yaml` | builds on push to `main`, deploys to GitHub Pages |
 | Old demo / Netlify | none | demo content was already deleted; `netlify.toml` and `pages.yaml` (orig) replaced |
+| Custom shortcodes | `layouts/_shortcodes/` | `hero-headline` (random h1, fixed two-line height via `.acc-hero-headline` in custom.css), `logo-carousel` (reads `data/logos.yaml`; styles in custom.css), `reach-me` (bordered contact block), `acc-figure` (diagram + caption, subpath-safe) |
+| Layout overrides | `layouts/home.html`, `layouts/single.html` | `home.html` has no title h1 — the homepage h1 comes from `hero-headline`; it also adds the `acc-home` class for homepage-only CSS. `single.html` (centered titles, no breadcrumb) only affects marketing pages; docs pages use the theme's `layouts/docs/single.html` (left-aligned titles, breadcrumb on) |
+| Custom CSS | `assets/css/custom.css` | 112.5% root font size; prose typography — system monospace on body text only (`ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", "DejaVu Sans Mono", monospace`; headings, navbar, sidebar, buttons, cards, bento, carousel stay in Hextra sans), `max-width: 68ch` measure cap on `.content p/li/blockquote/figcaption`, underlined prose links (`text-underline-offset: 0.15em`); CTA spacing, card subtitle equal-height, `acc-figure` styles, `.acc-hero-headline` fixed height, `.acc-home h2` section rhythm, `.acc-reach-me` contact block, `.acc-bento` homepage engagement grid (raw HTML in `content/_index.md`), `.acc-carousel` logo marquee |
+| Client logos | `data/logos.yaml` + `static/marketing/logos/` | add a row to the YAML and drop the SVG in place; the carousel renders the group twice for the loop |
+| OG / social image | `static/images/og-card.png` | 1200×630 PNG referenced in `hugo.yaml` `params.images`. Social platforms do not render SVG previews — do not point `params.images` at the SVG icon |
 
 ## Process docs are sourced — do not invent
 
@@ -188,6 +199,14 @@ The Triple Diamond name is a synthesis, not a single canonical model. If a futur
 ## Deploy
 
 Production deploy is **GitHub Pages**, not bunny.net. The workflow reads the base URL from `actions/configure-pages`, so the local `--baseURL` and the deployed URL do not have to match. Do not hardcode `baseURL` in `pages.yaml`.
+
+Until the custom domain is active the site is served from a **subpath** (`https://chartpath.github.io/accorderly/`). Any asset reference that assumes a root deploy breaks there. To check before pushing:
+
+```shell
+hugo --gc --minify --baseURL https://chartpath.github.io/accorderly/ && grep -oE '(href|src)=/[^/][^ >]*' public/index.html
+```
+
+The grep should print nothing (or only paths starting with the baseURL path).
 
 A bunny.net Storage Zone + Pull Zone deploy was the original plan but is deferred. If it comes back, restore it as a workflow sibling — the artifact (`public/`) is identical.
 
