@@ -74,15 +74,15 @@ User cohorts are usually small and limited (just enough for statistical signific
 
 ## The triple diamond
 
-Each diamond runs on its own clock, but they overlap. Running them together keeps decisions close to the work product, and the work product close to the user.
+Each diamond runs on its own clock, but they overlap and can be layered depending on team capacity. Running them together keeps decisions close to the work product, and the work product close to the user.
 
 {{< cards >}}
-  {{< card link="docs/process/discovery" title="Discovery" icon="search" subtitle="Continuous customer interviews, an Opportunity Solution Tree, and one working hypothesis a week." >}}
-  {{< card link="docs/process/design" title="Design" icon="pencil-alt" subtitle="Shape a rough, solved, bounded pitch that fits the appetite before any code is written." >}}
-  {{< card link="docs/process/devops" title="DevOps" icon="cog" subtitle="Build, ship, observe — a tight loop on CI/CD, telemetry, and small changes behind flags." >}}
+  {{< card link="docs/process/discovery" title="Discovery" icon="search" subtitle="Continuous customer interviews, an Opportunity Solution Tree, and one primary working hypothesis per week." >}}
+  {{< card link="docs/process/design" title="Design" icon="pencil-alt" subtitle="Shape a rough, validated solution that fits the appetite before any code is written." >}}
+  {{< card link="docs/process/devops" title="DevOps" icon="cog" subtitle="Build, ship, observe through a tight loop of CI/CD with integrated analytics and metrics." >}}
 {{< /cards >}}
 
-If the model sounds like a fit for your situation, the next step is a 30-minute call.
+If this delivery model sounds like a fit for your situation, let's talk.
 
 {{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}
 
