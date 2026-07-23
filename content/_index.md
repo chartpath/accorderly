@@ -14,7 +14,7 @@ I'm Chris Hart. Accorderly is my consulting practice for small product teams. My
 ## What I work on
 
 {{< acc-aside src="images/artworks/luisa-frassier-pnSHLvS_iMo-unsplash-3-ducks.jpg" alt="Three ducks swimming together in formation on water." flip="true" >}}
-Small-team software delivery, structured around a continuous process of Discovery, Design, DevOp that run in parallel. The model is a synthesis of practices I honed over 20 years of software product leadership.
+Small-team software delivery, structured around a continuous process of Discovery, Design, DevOps that run in parallel. The model is a synthesis of practices I honed over 20 years of software product leadership.
 
 - **Discovery** is the weekly habit of customer interviews feeding an [Opportunity Solution Tree](https://www.producttalk.org/opportunity-solution-trees/), in the sense Teresa Torres describes in *Continuous Discovery Habits*.
 - **Design** is shaping the work before any code is written, in the sense [Ryan Singer uses Shape Up](https://basecamp.com/shapeup) at Basecamp, layered on the [UK Design Council's Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/), the model that names the shape.
