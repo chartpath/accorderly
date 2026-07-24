@@ -30,6 +30,17 @@
 {{- end -}}
 {{- $buttonText := .Get "buttonText" -}}
 {{- $buttonLink := .Get "buttonLink" -}}
+{{- /* notice: optional HTML string rendered as a bordered card under the
+         figure (e.g. the AI policy on the homepage). Passed as a param for
+         the same reason as buttonText — markdownify would escape nested
+         shortcode/HTML blocks in .Inner, and .Inner can't be split across
+         the two grid columns anyway. */ -}}
+{{- $notice := .Get "notice" -}}
+{{- /* bodySrc/bodyAlt: optional second image rendered under the text in
+         the body column, with the same card frame and resize pipeline as
+         the main figure. */ -}}
+{{- $bodySrc := .Get "bodySrc" -}}
+{{- $bodyAlt := .Get "bodyAlt" -}}
 <div class="acc-aside{{ if .Get "flip" }} acc-aside-flip{{ end }}">
   <div class="acc-aside-body">
     {{ $body }}
@@ -40,13 +51,33 @@
       {{ if hasPrefix $buttonLink "http" }}target="_blank" rel="noreferrer"{{ end -}}
     >{{ . }}</a></div>
     {{- end }}
-  </div>
-  <figure class="acc-aside-figure">
-    {{- with resources.Get $src }}
-      {{- $resized := .Resize "1200x" }}
-      <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" {{ with $class }}class="{{ . }}" {{ end }}loading="lazy">
-    {{- else }}
-      {{- errorf "acc-aside: image %q not found in assets/" $src -}}
+    {{- with $bodySrc }}
+    <figure class="acc-aside-figure acc-aside-body-figure">
+      {{- with resources.Get . }}
+        {{- /* Fill to 4:3 (center-anchored) instead of a plain resize —
+               portrait artwork like the cypress trees would otherwise make
+               the body column much taller than the visual column. Center
+               keeps some sky above the treetops while trimming their
+               bases, so they read as growing upward out of frame. */ -}}
+        {{- $resized := .Fill "1200x900 Center" }}
+        <img src="{{ $resized.RelPermalink }}" alt="{{ $bodyAlt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" loading="lazy">
+      {{- else }}
+        {{- errorf "acc-aside: image %q not found in assets/" . -}}
+      {{- end }}
+    </figure>
     {{- end }}
-  </figure>
+  </div>
+  <div class="acc-aside-visual">
+    <figure class="acc-aside-figure">
+      {{- with resources.Get $src }}
+        {{- $resized := .Resize "1200x" }}
+        <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" {{ with $class }}class="{{ . }}" {{ end }}loading="lazy">
+      {{- else }}
+        {{- errorf "acc-aside: image %q not found in assets/" $src -}}
+      {{- end }}
+    </figure>
+    {{- with $notice }}
+    <div class="acc-notice">{{ . | safeHTML }}</div>
+    {{- end }}
+  </div>
 </div>

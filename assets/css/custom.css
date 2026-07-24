@@ -100,12 +100,21 @@ html.dark .acc-figure figcaption {
   .acc-aside {
     grid-template-columns: 1fr 1fr;
   }
-  .acc-aside.acc-aside-flip .acc-aside-figure {
+  .acc-aside.acc-aside-flip .acc-aside-visual {
     order: -1;
   }
 }
 .acc-aside-body {
   min-width: 0;
+}
+.acc-aside-visual {
+  min-width: 0;
+}
+.acc-aside-visual .acc-notice {
+  margin-top: 1.5rem;
+}
+.acc-aside-body .acc-aside-body-figure {
+  margin-top: 2.5rem;
 }
 .acc-aside-figure {
   min-width: 0;
@@ -207,6 +216,33 @@ html.dark .acc-bento-cell {
 @media (min-width: 880px) {
   .acc-bento { grid-template-columns: repeat(3, 1fr); }
   .acc-bento-wide { grid-column: span 2; }
+}
+
+/* Notice card (raw HTML in content, e.g. the AI policy on the homepage) —
+   same bordered-box look as a bento cell, but full width of its column with
+   breathing room above. */
+.acc-notice {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: .5rem;
+}
+html.dark .acc-notice {
+  border-color: #374151;
+}
+.acc-notice h3 {
+  margin: 0 0 .5rem;
+  font-size: 1rem;
+}
+.acc-notice ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.acc-notice li + li {
+  margin-top: .5rem;
+}
+.acc-notice p {
+  margin: .75rem 0 0;
 }
 
 /* Logo carousel (logo-carousel shortcode) — monochrome logos, edge fade,
