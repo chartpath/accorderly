@@ -6,7 +6,11 @@ toc: false
 {{< hero-headline >}}
 
 {{< acc-aside src="images/artworks/yuval-zukerman-XlkKqvprHeg-unsplash-discovery-text-mural.jpg" alt="A painted wall mural reading 'The real voyage of discovery consists not in seeking new landscapes, but in having new eyes' — Marcel Proust." buttonText="Book a call →" buttonLink="https://cal.eu/accorderly" >}}
-I'm Chris Hart. Accorderly is my consulting practice for small product teams. My role covers product, UX research, and development. I'm a freelance Chief Product Technology Officer (CPTO).
+Small product teams hire me to figure out what to build and ship it. I'm Chris Hart: product, UX research, and engineering, as a freelance CPTO.
+
+<!-- PLACEHOLDER: add a one-line "who this is for" filter — the real team size and stage
+     you serve (e.g. teams of 2–10, usually pre-scale, who need a senior generalist for a
+     stretch). Fill in your actual band so the right visitor feels seen. -->
 {{< /acc-aside >}}
 
 {{< logo-carousel >}}
@@ -14,27 +18,19 @@ I'm Chris Hart. Accorderly is my consulting practice for small product teams. My
 ## What I work on
 
 {{< acc-aside src="images/artworks/luisa-frassier-pnSHLvS_iMo-unsplash-3-ducks.jpg" alt="Three ducks swimming together in formation on water." flip="true" >}}
-Small-team software delivery, structured around a continuous process of Discovery, Design, DevOps that run in parallel. The model is a synthesis of practices I honed over 20 years of software product leadership.
-
-- **Discovery** is the weekly habit of customer interviews feeding an [Opportunity Solution Tree](https://www.producttalk.org/opportunity-solution-trees/), in the sense Teresa Torres describes in *Continuous Discovery Habits*.
-- **Design** is shaping the work before any code is written, in the sense [Ryan Singer uses Shape Up](https://basecamp.com/shapeup) at Basecamp, layered on the [UK Design Council's Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/), the model that names the shape.
-- **DevOps** is the build / ship / observe loop, in the sense of [The DevOps Handbook](https://itrevolution.com/the-devops-handbook/). It runs in parallel, not as a final phase, because of the [shift-left approach](https://en.wikipedia.org/wiki/Shift-left_testing) (Larry Smith, 2001): do the things at the end of the timeline earlier.
-
-If you want to know more, or think these practices might help you, [email me](mailto:hello@accorderly.com) or [book a call](https://cal.eu/accorderly).
+My delivery model runs Discovery, Design, and DevOps in parallel, not as phases that hand off. Each is a continuous loop; together they keep decisions close to the user. See [the triple diamond](/docs/process/).
 {{< /acc-aside >}}
 
 ## How I build knowledge-driven applications
 
-{{< acc-aside src="images/artworks/pavan-trikutam-71CjSSB83Wo-unsplash-3-phones.jpg" alt="Three vintage wall-mounted payphones with curly handset cords." bodySrc="images/artworks/benny-samuel-sn82r4D2X4c-unsplash-3-trees.jpg" bodyAlt="Three tall cypress trees against a blue sky with scattered clouds." notice="<h3>AI ethics policy</h3><ul><li>No generative AI for creative work: nothing that writes copy, and nothing that makes images or artwork.</li><li>No chatbots or thin model wrappers, but embedded command palettes and composer features are fully supported.</li><li>Voice AI is input only. It can transcribe what a person says, but verified copyright permission from the original speaker is needed to ship synthetic voices.</li><li>Generative output is never treated as fact. Language models can't verify their own answers, so anything presented as fact gets checked against an original source.</li><li>Code and data generation is supported inside environments where every output can be checked deterministically. Courts have already held a companies liable for what chatbots tell customers.</li><li>Open source or open weight models only. Because most training data was gathered without permission, models that anyone can run give some protection back to the community.</li><li>No products marketed towards replacing jobs or avoiding doom.</li></ul><p>Creative and strategic work stays with real people.</p>" >}}
-Useful knowledge-driven apps (AI or not) rest on three parts that work as one:
+{{< acc-aside src="images/artworks/pavan-trikutam-71CjSSB83Wo-unsplash-3-phones.jpg" alt="Three vintage wall-mounted payphones with curly handset cords." >}}
+I build products that can show their work. That's what makes them safe to use where "the model said so" is not good enough.
 
-- **Models parse external facts into a logical data format.** Machine learning is good at pattern matching: it recognizes things it has seen before. Smaller and cheaper models are usually the best fit for embedding in applications. Sometimes there is no ML needed and a plain old search index works well.
-- **Rules check the processed data for correctness and implications.** Rules and logic are good at explanations: they show why a decision follows from the facts. And they're totally deterministic, which means control over potential liability.
-- **People drive the living goals _and_ the desired outputs.** A person reviews the result and can see how it was reached. But beforehand they also configure domain-specific rules that cannot be left to mere probability. This is a step above so-called "human in the loop", and completely avoids the "reverse centaur" trap [coined by Cory Doctorow](https://locusmag.com/feature/commentary-cory-doctorow-reverse-centaurs/).
+- Models parse external facts into a logical data format. Smaller, cheaper models are usually the right fit for embedding; sometimes a plain search index is enough.
+- Rules check the processed data for correctness. Rules are deterministic, so you keep control over liability.
+- People drive the goals and review the output: a step above "human in the loop", and clear of the "reverse centaur" trap [Cory Doctorow coined](https://locusmag.com/feature/commentary-cory-doctorow-reverse-centaurs/).
 
-It runs on proven data engineering pipelines that have powered enterprises for over a decade before the latest AI models were even released.
-
-I have commercialized this AI framework with many companies including the ones shown above. These systems show their work, which is what makes AI safe to use where "the model said so" is not good enough.
+It runs on data engineering pipelines that have powered enterprises for over a decade. [Read the AI ethics policy](/docs/ai-ethics/).
 {{< /acc-aside >}}
 
 ## What engagements look like
@@ -52,24 +48,12 @@ I have commercialized this AI framework with many companies including the ones s
     <h3>Hourly</h3>
     <p>When the work is open-ended and you want someone senior on call.</p>
   </div>
-  <div class="acc-bento-cell">
-    <h3>Embedded</h3>
-    <p>When you need an extra senior on the team for a stretch, and the work is the kind I do.</p>
-  </div>
-  <div class="acc-bento-cell acc-bento-wide">
-    <h3>The first conversation</h3>
-    <p>Short, free, and ends with one of three outcomes: a clear next step, a polite no, or a referral to someone better suited. <a href="https://cal.eu/accorderly">Book a call &rarr;</a></p>
-  </div>
 </div>
 
 ## What you get
 
 {{< acc-aside src="images/artworks/sasun-bughdaryan-Qwv7JPI03VQ-unsplash-magnifying-glass.jpg" alt="A red-handled magnifying glass over a teal dial face." flip="true" >}}
-Slices of working software shipped to real users where the engagement allows. A slice is feature-complete, end-to-end set of functionality that can be tested at all levels of the implementation, even if it might not be ready for massive scale.
-
-Discovery hands off a hypothesis. Design shapes the scope of the slice. DevOps ships the slice, and finally the learning from the deployment environment flows back into Discovery again. Rinse and repeat as needed.
-
-User cohorts are usually small and limited (just enough for statistical significance), either through feature flagging (a rule decides who sees the code in production) or canary releases (a small slice of traffic widens only if metrics hold).
+Working software in your users' hands, shipped in slices a small team can actually finish. Each slice is end-to-end and testable even if it isn't built for massive scale yet. Releases go out behind flags or as canaries, so the wrong bet never reaches everyone at once.
 {{< /acc-aside >}}
 
 ## The triple diamond
@@ -82,7 +66,7 @@ Each diamond runs on its own clock, but they overlap and can be layered dependin
   {{< card link="docs/process/devops" title="DevOps" icon="cog" subtitle="Build, ship, observe through a tight loop of CI/CD with integrated analytics and metrics." >}}
 {{< /cards >}}
 
-If this delivery model sounds like a fit for your situation, let's talk.
+The first conversation is short, free, and ends with one of three outcomes: a clear next step, a polite no, or a referral to someone better suited.
 
 {{< hextra/hero-button text="Book a call →" link="https://cal.eu/accorderly" >}}
 

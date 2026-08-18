@@ -46,8 +46,8 @@ The whole site should read like a clear note from one person to another: short s
 
 - The human contributor must always edit and rewrite any draft prose themselves before committing. Anything an agent writes is a first draft, not finished copy.
 - AI cannot be trusted to write well on its own. Treat generated prose as material to react to, not as text to ship.
-- Unless the user's prompt is very specific, it is fine — and often better — to leave a section as a placeholder instead of guessing. Write a short note that names the topic, the context, and what the section needs to say, and let the human fill it in their own voice.
-- A concrete placeholder beats mediocre auto-generated copy. When in doubt, mark the gap and stop.
+- The plain-language and tropes rules below are the contract for generated prose. Draft copy that follows them is the starting point for the human's rewrite, not a placeholder to be filled in later.
+- When a section needs a fact the agent cannot know (a real number, a name, a specific client detail), leave a placeholder note naming the gap. Do not invent the fact.
 
 ### Plain language
 
@@ -127,11 +127,38 @@ Adapted from [tropes.fyi/tropes-md](https://tropes.fyi/tropes-md). Any single on
 - No content duplication. The same paragraph appearing twice in a single piece is a sign of unedited output.
 - No "In conclusion" signposts. The reader can tell.
 
+**Composition (new)**
+
+- No reasoning leak. Don't narrate what the text is doing, deciding, or is about to do. Just do it. "What that changes is smaller than it might appear, and what it changes is worth being precise about." — no. Say the thing.
+- No premise stacking. A point (especially a question) preceded by a paragraph of its own evidence, so by the time it lands it has already been made two or three times over.
+- No preamble (announce-then-answer). "Two constraints shape the design." "The more important point is where the decision sits." Deliver the point; don't set up the delivery.
+- No self-echo. Reusing one of your own words or phrases from earlier in the same piece as if paying it off, when it's really the same narrow vocabulary surfacing again.
+- No compulsive counting. "Five things we wish to discuss." "Four reasons why this will work." Stating the exact number of items before listing them, as if getting the count right were the achievement.
+- No belaboring the unnecessary. Stating a minor or uncontroversial point just to defend it as if anticipating an objection nobody was going to raise.
+- No never-ending conclusion. The ending stacks clause after clause instead of landing one point, as if reluctant to stop.
+- No comma-clipped trailing phrase. A short tail hung off a comma to close a sentence instead of landing the point directly ("above the content, and save.").
+
 **Formatting**
 
 - No bold-first bullets. Every bullet starting with `**Keyword**: …` is a tell.
 - No Unicode decoration in prose. Use straight quotes, hyphens, and `->` or `→` only where it actually carries meaning. Real writers type straight quotes.
 - No emoji in marketing copy. Process pages with a single small emoji for the diamond icon (via Hextra's `icon` parameter on `{{< card >}}`) is fine; that is iconography, not decoration.
+- No title case headings. Capitalise only the first word and proper nouns. "Understanding The Impact Of Modern Technology On Society" — no.
+- No "Where / What / Why" headings by default. "Where the market is stuck today", "What we do differently". A serious tell on its own, independent of what the content under the heading says.
+
+**Word choice (new)**
+
+- No synonym cycling. Don't refuse to repeat a noun twice, cycling through synonyms instead. A dashboard becomes an interface, then a portal, then the analytics hub, all in the same paragraph. Use one word.
+- No "load-bearing" or "gated" as decorative synonyms for "important" or "restricted". ("Load-bearing" is fine in its literal structural sense.)
+- No "where it actually lives" framing. "Where the complexity actually lives." Say where it is directly.
+
+**Tone (new)**
+
+- No quotable one-liners. A standalone line made to sound quotable but carrying no actual information. Pure slide bait.
+- No appeal to familiarity. "A classic," "famously," "notoriously," "as we all know." If you can't name the source, don't borrow its weight.
+- No promotional language. "An all-in-one solution that unlocks unprecedented productivity." Describe the thing; don't sell it.
+- No collaborative "we" in personal material. The site is written by one person. "We're now equipped to handle whatever comes next" — switch to "I".
+- No forced figurative language. A simile or metaphor reached for because it sounds clever rather than because it clarifies. "Using them as a productivity measure is like tracking your weight loss with a scale that you also control the calibration on." — no.
 
 ### Review checklist
 
